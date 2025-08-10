@@ -576,7 +576,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         width: getSize().width,
                         height: 52,
                         text: appText.createAnAccount,
-                        bgColor: isEmptyInputs ? greyCF : green77(),
+                        bgColor: isEmptyInputs ? greyCF : primaryColor,
                         textColor: Colors.white,
                         borderColor: Colors.transparent,
                         isLoading: isSendingData),

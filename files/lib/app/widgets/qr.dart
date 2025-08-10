@@ -373,7 +373,7 @@ class _ScannerPageState extends State<ScannerPage> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: isSuccess
                         ? Color(0xff4caf50)
-                        : green77(), // Button color
+                        : primaryColor, // Button color
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -416,7 +416,7 @@ class _ScannerPageState extends State<ScannerPage> {
             appText.scanner,
             style: TextStyle(fontWeight: FontWeight.w600),
           ),
-          backgroundColor: green77(),
+          backgroundColor: primaryColor,
           centerTitle: true,
           elevation: 5,
           shape: RoundedRectangleBorder(
@@ -448,7 +448,7 @@ class _ScannerPageState extends State<ScannerPage> {
                     height: 120,
                     width: 120,
                     decoration: BoxDecoration(
-                      color: green77(),
+                      color: primaryColor,
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
@@ -491,7 +491,7 @@ class _ScannerPageState extends State<ScannerPage> {
                       hintText: appText.qrHint,
                       hintStyle: TextStyle(color: Colors.grey.shade600),
                       border: InputBorder.none,
-                      prefixIcon: Icon(Icons.qr_code, color: green77()),
+                      prefixIcon: Icon(Icons.qr_code, color: primaryColor),
                     ),
                     onChanged: (value) {
                       setState(() {
@@ -506,7 +506,7 @@ class _ScannerPageState extends State<ScannerPage> {
                     Sendforcheckusage(qrCodeController.text);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: green77(),
+                    backgroundColor: primaryColor,
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),

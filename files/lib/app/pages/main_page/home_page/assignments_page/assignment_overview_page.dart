@@ -388,7 +388,7 @@ class _AssignmentOverviewPageState extends State<AssignmentOverviewPage> {
                   width: getSize().width, 
                   height: 52, 
                   text: isMyAssignment ? appText.viewAssignment : appText.reviewSubmissions, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
               )

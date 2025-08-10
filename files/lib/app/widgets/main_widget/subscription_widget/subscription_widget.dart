@@ -33,7 +33,7 @@ class SubscriptionWidget{
 
             decoration: BoxDecoration(
                 border: Border.all(
-                  color: greyE7,
+                  color: primaryColor.withOpacity(0.2),
                 ),
                 borderRadius: borderRadius()
             ),
@@ -256,7 +256,7 @@ class SubscriptionWidget{
 
                                 Text(
                                   CurrencyUtils.calculator(data?.subscribes?[index].price),
-                                  style: style24Bold().copyWith(fontSize: 26, color: green77()),
+                                  style: style24Bold().copyWith(fontSize: 26, color: primaryColor),
                                 ),
 
                                 space(16),
@@ -339,7 +339,7 @@ class SubscriptionWidget{
                                       width: getSize().width,
                                       height: 50,
                                       text: appText.purchase,
-                                      bgColor: green77(),
+                                      bgColor: primaryColor,
                                       textColor: Colors.white,
                                       isLoading: isLoading,
                                     ),
@@ -377,7 +377,7 @@ class SubscriptionWidget{
                   height: 7,
 
                   decoration: BoxDecoration(
-                      color: green77(),
+                      color: primaryColor,
                       borderRadius: borderRadius()
                   ),
 
@@ -609,7 +609,7 @@ class SubscriptionWidget{
                       space(0,width: 15),
 
                       dashboardInfoBox(
-                          blue64(),
+                          primaryColor2,
                           AppAssets.profileSvg,
                           data?.accountInstructorsCount?.toString() ?? '-',
                           appText.instrcutors,
@@ -719,7 +719,7 @@ class SubscriptionWidget{
 
                                 Text(
                                   CurrencyUtils.calculator(data?.packages?[index].price),
-                                  style: style24Bold().copyWith(fontSize: 26, color: green77()),
+                                  style: style24Bold().copyWith(fontSize: 26, color: primaryColor),
                                 ),
 
                                 space(16),
@@ -777,7 +777,7 @@ class SubscriptionWidget{
                                     width: getSize().width,
                                     height: 50,
                                     text: appText.purchase,
-                                    bgColor: green77(),
+                                    bgColor: primaryColor,
                                     textColor: Colors.white,
                                     isLoading: isLoading,
                                   ),
@@ -815,7 +815,7 @@ class SubscriptionWidget{
                   height: 7,
 
                   decoration: BoxDecoration(
-                      color: green77(),
+                      color: primaryColor,
                       borderRadius: borderRadius()
                   ),
 

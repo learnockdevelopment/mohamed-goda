@@ -142,8 +142,8 @@ class _FilterCategoryPageState extends State<FilterCategoryPage> {
                       height: 48,
                       text: appText.options,
                       bgColor: Colors.transparent,
-                      textColor: green77(),
-                      borderColor: green77(),
+                      textColor: primaryColor,
+                      borderColor: primaryColor,
                       iconPath: AppAssets.optionSvg,
                       raduis: 15),
                 ),
@@ -169,14 +169,14 @@ class _FilterCategoryPageState extends State<FilterCategoryPage> {
                       text: appText.filters,
                       bgColor: Colors.transparent,
                       textColor: filters.isEmpty
-                          ? green77().withOpacity(.35)
-                          : green77(),
+                          ? primaryColor.withOpacity(.35)
+                          : primaryColor,
                       borderColor: filters.isEmpty
-                          ? green77().withOpacity(.35)
-                          : green77(),
+                          ? primaryColor.withOpacity(.35)
+                          : primaryColor,
                       iconColor: filters.isEmpty
-                          ? green77().withOpacity(.35)
-                          : green77(),
+                          ? primaryColor.withOpacity(.35)
+                          : primaryColor,
                       iconPath: AppAssets.filterSvg,
                       raduis: 15),
                 ),
@@ -194,7 +194,7 @@ class _FilterCategoryPageState extends State<FilterCategoryPage> {
                 //     text: '',
                 //     bgColor: Colors.transparent,
                 //     textColor: Colors.white,
-                //     borderColor: green77(),
+                //     borderColor: primaryColor,
                 //     iconPath: AppAssets.listSvg,
                 //     //isGrid ? AppAssets.gridSvg :
                 //     raduis: 15)
@@ -263,7 +263,7 @@ class _FilterCategoryPageState extends State<FilterCategoryPage> {
                                         height: 7,
                                         margin: padding(horizontal: 2),
                                         decoration: BoxDecoration(
-                                            color: green77(),
+                                            color: primaryColor,
                                             borderRadius: borderRadius()),
                                       );
                                     }),

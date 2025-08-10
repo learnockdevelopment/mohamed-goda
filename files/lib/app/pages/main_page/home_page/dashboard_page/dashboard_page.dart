@@ -38,9 +38,9 @@
 //   // int currentSlide = 0;
 //
 //   List<Color> gradientColors = [
-//     green77().withOpacity(.9),
-//     green77().withOpacity(.7),
-//     green77().withOpacity(.3),
+//     primaryColor.withOpacity(.9),
+//     primaryColor.withOpacity(.7),
+//     primaryColor.withOpacity(.3),
 //     Colors.white.withOpacity(.1),
 //   ];
 //
@@ -82,7 +82,7 @@
 //             //             appBar: AppBar(
 //               titleSpacing: 0,
 //               automaticallyImplyLeading: false,
-//               backgroundColor: green77(),
+//               backgroundColor: primaryColor,
 //               elevation: 0,
 //               toolbarHeight: 65,
 //               title: Container(
@@ -189,7 +189,7 @@
 //                               width: getSize().width,
 //                               height: 155,
 //                               decoration: BoxDecoration(
-//                                 color: green77(),
+//                                 color: primaryColor,
 //                                 borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28))
 //                               ),
 //                               //
@@ -392,7 +392,7 @@
 //                                 '',
 //                                 (){},
 //                                 AppAssets.walletSvg,
-//                                 green77(),
+//                                 primaryColor,
 //                                 isBg: true
 //                               ),
 //
@@ -438,7 +438,7 @@
 //                                 height: 7,
 //
 //                                 decoration: BoxDecoration(
-//                                   color: green77(),
+//                                   color: primaryColor,
 //                                   borderRadius: borderRadius()
 //                                 ),
 //
@@ -635,7 +635,7 @@
 //                                 height: 7,
 //
 //                                 decoration: BoxDecoration(
-//                                   color: green77(),
+//                                   color: primaryColor,
 //                                   borderRadius: borderRadius()
 //                                 ),
 //
@@ -834,9 +834,9 @@
 //             }).toList();
 //           },
 //           getTooltipColor: (touchedSpot) {
-//             return green77();
+//             return primaryColor;
 //           },
-//           // tooltipBgColor: green77(),
+//           // tooltipBgColor: primaryColor,
 //           tooltipPadding: padding(vertical: 8, horizontal: 16),
 //           tooltipRoundedRadius: 22
 //         ),
@@ -862,8 +862,8 @@
 //
 //           gradient: LinearGradient(
 //             colors: [
-//               green77(),
-//               green77(),
+//               primaryColor,
+//               primaryColor,
 //             ],
 //             begin: Alignment.bottomCenter,
 //             end: Alignment.topCenter
@@ -1072,9 +1072,9 @@ class _DashboardPageState extends State<DashboardPage> {
   // int currentSlide = 0;
 
   List<Color> gradientColors = [
-    green77().withOpacity(.9),
-    green77().withOpacity(.7),
-    green77().withOpacity(.3),
+    primaryColor.withOpacity(.9),
+    primaryColor.withOpacity(.7),
+    primaryColor.withOpacity(.3),
     Colors.white.withOpacity(.1),
   ];
 
@@ -1110,7 +1110,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 appBar: AppBar(
           titleSpacing: 0,
           automaticallyImplyLeading: false,
-          backgroundColor: green77(),
+          backgroundColor: primaryColor,
           elevation: 0,
           toolbarHeight: 65,
           title: Container(
@@ -1199,7 +1199,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                     width: getSize().width,
                                     height: 60,
                                     decoration: BoxDecoration(
-                                        color: green77(),
+                                        color: primaryColor,
                                         borderRadius:
                                             const BorderRadius.vertical(
                                                 bottom: Radius.circular(28))),
@@ -1352,7 +1352,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                     '',
                                     () {},
                                     AppAssets.walletSvg,
-                                    green77(),
+                                    primaryColor,
                                     isBg: true),
                                 slideUi(
                                     data?.badges?.earned ?? '',
@@ -1389,7 +1389,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                   width: currentNotice == index ? 16 : 7,
                                   height: 7,
                                   decoration: BoxDecoration(
-                                      color: green77(),
+                                      color: primaryColor,
                                       borderRadius: borderRadius()),
                                 );
                               }),
@@ -1556,7 +1556,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                   width: currentNotice == index ? 16 : 7,
                                   height: 7,
                                   decoration: BoxDecoration(
-                                      color: green77(),
+                                      color: primaryColor,
                                       borderRadius: borderRadius()),
                                 );
                               }),
@@ -1748,9 +1748,9 @@ class _DashboardPageState extends State<DashboardPage> {
               }).toList();
             },
             getTooltipColor: (touchedSpot) {
-              return green77();
+              return primaryColor;
             },
-            // tooltipBgColor: green77(),
+            // tooltipBgColor: primaryColor,
             tooltipPadding: padding(vertical: 8, horizontal: 16),
             tooltipRoundedRadius: 22),
       ),
@@ -1765,8 +1765,8 @@ class _DashboardPageState extends State<DashboardPage> {
           isCurved: true,
           preventCurveOverShooting: true,
           gradient: LinearGradient(colors: [
-            green77(),
-            green77(),
+            primaryColor,
+            primaryColor,
           ], begin: Alignment.bottomCenter, end: Alignment.topCenter),
           barWidth: 1,
           isStrokeCapRound: true,

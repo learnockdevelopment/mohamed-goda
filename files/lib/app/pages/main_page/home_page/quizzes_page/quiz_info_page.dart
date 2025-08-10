@@ -148,11 +148,11 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
                                 color: Colors.white,
                                 border: Border.all(
                                   color: beforTabName == 'List'
-                                ? green77()
+                                ? primaryColor
                                 : status == 'waiting'
                                     ? yellow29
                                     : status == 'passed'
-                                      ? green77()
+                                      ? primaryColor
                                       : red49,
             
                                   width: 15
@@ -161,11 +161,11 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
                                 boxShadow: [
                                   boxShadow(
                                     beforTabName == 'List'
-                                      ? green77().withOpacity(.25)
+                                      ? primaryColor.withOpacity(.25)
                                       : status == 'waiting'
                                           ? yellow29.withOpacity(.25)
                                           : status == 'passed'
-                                            ? green77().withOpacity(.25)
+                                            ? primaryColor.withOpacity(.25)
                                             : red49.withOpacity(.25), 
                                     blur: 30, y: 2
                                   )
@@ -208,9 +208,9 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
                                 height: 42,
                                 decoration: BoxDecoration(
                                   color: beforTabName == 'List'
-                                ? green77()
+                                ? primaryColor
                                 : status == 'passed' 
-                                    ? green77() 
+                                    ? primaryColor 
                                     : status == 'waiting'
                                       ? yellow29
                                       : red49,
@@ -478,7 +478,7 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
         width: getSize().width, 
         height: 52, 
         text: appText.backToQuizzes, 
-        bgColor: green77(), 
+        bgColor: primaryColor, 
         textColor: Colors.white
       );
 
@@ -524,7 +524,7 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
           width: getSize().width, 
           height: 52, 
           text: appText.reviewQuiz, 
-          bgColor: green77(), 
+          bgColor: primaryColor, 
           textColor: Colors.white
         );
       }
@@ -546,7 +546,7 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
           width: getSize().width, 
           height: 52, 
           text: appText.start, 
-          bgColor: green77(), 
+          bgColor: primaryColor, 
           textColor: Colors.white
         );
       
@@ -564,7 +564,7 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
           width: getSize().width, 
           height: 51, 
           text: appText.start, 
-          bgColor: green77(), 
+          bgColor: primaryColor, 
           textColor: Colors.white
         )
       : Row(
@@ -598,8 +598,8 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
                   height: 52, 
                   text: status == 'passed' ? appText.reviewAnswers : appText.retry,
                   bgColor: Colors.white, 
-                  textColor: green77(),
-                  borderColor: green77()
+                  textColor: primaryColor,
+                  borderColor: primaryColor
                 )
               ),
 
@@ -663,7 +663,7 @@ class _QuizInfoPageState extends State<QuizInfoPage> {
         width: getSize().width, 
         height: 52, 
         text: appText.backToQuizzes, 
-        bgColor: green77(), 
+        bgColor: primaryColor, 
         textColor: Colors.white
       )
     );

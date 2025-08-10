@@ -88,7 +88,7 @@ class MmaintenancePageState extends State<MaintenancePage> {
                 width: getSize().width * .4, 
                 height: 52, 
                 text: data?['maintenance_button']?['title'] ?? '', 
-                bgColor: green77(), 
+                bgColor: primaryColor, 
                 textColor: Colors.white,
                 raduis: 15
               )
@@ -151,7 +151,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
               Text(
                 dayHourMinuteSecondFormatted(Duration(seconds: seconds)).split(':').first,
-                style: style16Regular().copyWith(color: green77()),
+                style: style16Regular().copyWith(color: primaryColor),
               ),
 
               Text(
@@ -164,7 +164,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
           Text(
             ' : ',
-            style: style16Regular().copyWith(color: green77()),
+            style: style16Regular().copyWith(color: primaryColor),
           ),
           
           // Hours
@@ -173,7 +173,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
               Text(
                 dayHourMinuteSecondFormatted(Duration(seconds: seconds)).split(':')[1],
-                style: style16Regular().copyWith(color: green77()),
+                style: style16Regular().copyWith(color: primaryColor),
               ),
 
               Text(
@@ -186,7 +186,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
           Text(
             ' : ',
-            style: style16Regular().copyWith(color: green77()),
+            style: style16Regular().copyWith(color: primaryColor),
           ),
           
           // min
@@ -195,7 +195,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
               Text(
                 dayHourMinuteSecondFormatted(Duration(seconds: seconds)).split(':')[2],
-                style: style16Regular().copyWith(color: green77()),
+                style: style16Regular().copyWith(color: primaryColor),
               ),
 
               Text(
@@ -208,7 +208,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
           Text(
             ' : ',
-            style: style16Regular().copyWith(color: green77()),
+            style: style16Regular().copyWith(color: primaryColor),
           ),
           
           // second
@@ -217,7 +217,7 @@ class _MonthTimerState extends State<MonthTimer> {
 
               Text(
                 dayHourMinuteSecondFormatted(Duration(seconds: seconds)).split(':')[3],
-                style: style16Regular().copyWith(color: green77()),
+                style: style16Regular().copyWith(color: primaryColor),
               ),
 
               Text(

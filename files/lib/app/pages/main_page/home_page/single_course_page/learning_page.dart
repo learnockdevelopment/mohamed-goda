@@ -291,7 +291,7 @@ class _LearningPageState extends State<LearningPage> with TickerProviderStateMix
                                 width: getSize().width,
                                 height: 52,
                                 text: appText.leaveAComment,
-                                bgColor: green77(),
+                                bgColor: primaryColor,
                                 textColor: Colors.white
                             ),
                           ),

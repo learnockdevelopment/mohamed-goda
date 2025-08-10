@@ -521,7 +521,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                             width: MediaQuery.of(context).size.width,
                             height: 52,
                             text: appText.login,
-                            bgColor: green77(),
+                            bgColor: primaryColor,
                             textColor: Colors.white),
                       )),
                 } else ...{
@@ -577,7 +577,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                               0) >
                                               0
                                               ? greyCF
-                                              : green77(),
+                                              : primaryColor,
                                           decoration: (courseData!
                                               .discountPercent ??
                                               0) >
@@ -590,7 +590,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                               0) >
                                               0
                                               ? greyCF
-                                              : green77(),
+                                              : primaryColor,
                                         ),
                                       ),
                                       if ((courseData!
@@ -611,7 +611,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                                       100)),
                                           style: style14Regular()
                                               .copyWith(
-                                            color: green77(),
+                                            color: primaryColor,
                                           ),
                                         ),
                                       },
@@ -704,7 +704,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                               height: 52,
                                               text: appText
                                                   .enrollOnClass,
-                                              bgColor: green77(),
+                                              bgColor: primaryColor,
                                               textColor: Colors.white,
                                               isLoading:
                                               isEnrollLoading)),
@@ -745,13 +745,13 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                                 bgColor:
                                                 Colors
                                                     .transparent,
-                                                textColor: green77(),
+                                                textColor: primaryColor,
                                                 borderColor:
-                                                green77(),
+                                                primaryColor,
                                                 isLoading:
                                                 isSubscribeLoading,
                                                 loadingColor:
-                                                green77())),
+                                                primaryColor)),
                                       }
                                     ],
                                   )
@@ -766,7 +766,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                           .width,
                                       height: 53,
                                       text: appText.login,
-                                      bgColor: green77(),
+                                      bgColor: primaryColor,
                                       textColor: Colors.white),
                                 }
                               } else ...{
@@ -803,7 +803,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                                 : 5,
                                             height: 4,
                                             decoration: BoxDecoration(
-                                              color: green77(),
+                                              color: primaryColor,
                                               borderRadius:
                                               borderRadius(),
                                             ),
@@ -831,7 +831,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                                         height: 52,
                                         text:
                                         appText.goToLearningPage,
-                                        bgColor: green77(),
+                                        bgColor: primaryColor,
                                         textColor: Colors.white,
                                         raduis: 15)
                                   ],
@@ -876,7 +876,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                               MediaQuery.of(context).size.width,
                               height: 52,
                               text: appText.writeReview,
-                              bgColor: green77(),
+                              bgColor: primaryColor,
                               textColor: Colors.white),
                         )),
                   },
@@ -913,7 +913,7 @@ class _SingleCoursePageState extends State<SingleCoursePage>
                             width: MediaQuery.of(context).size.width,
                             height: 52,
                             text: appText.leaveAComment,
-                            bgColor: green77(),
+                            bgColor: primaryColor,
                             textColor: Colors.white),
                       )),
                 }

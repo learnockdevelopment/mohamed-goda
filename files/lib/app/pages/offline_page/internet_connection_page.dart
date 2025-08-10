@@ -51,7 +51,7 @@ class _InternetConnectionPageState extends State<InternetConnectionPage> {
             width: getSize().width * .55, 
             height: 52, 
             text: appText.retry, 
-            bgColor: green77(), 
+            bgColor: primaryColor, 
             textColor: Colors.white
           ),
 
@@ -81,7 +81,7 @@ class _InternetConnectionPageState extends State<InternetConnectionPage> {
               width: getSize().width, 
               height: 52, 
               text: appText.myCourses, 
-              bgColor: green77(), 
+              bgColor: primaryColor, 
               textColor: Colors.white
             ),
           ),

@@ -4,25 +4,14 @@ import 'package:flutter/material.dart';
 Color? backgroundColor = Colors.white;
 
 // Primary colors
-const Color primaryColor = Color(0xff8c30e9); // Example: Blue
-const Color primaryColor2 = Color(0xffcfe9f8); // Light
-const Color secondaryColor = Color(0xff370270); // Example: Green
+const Color primaryColor = Color(0xff00d1fd); // Example: Blue
+const Color primaryColor2 = Color(0xff226880); // Light
+const Color secondaryColor = Color(0xff226880); // Example: Green
 
 // Text colors
 const Color textPrimaryColor = Color(0xFFD2E0FB); // FOR DARK BACKGROUND
 const Color textSecondaryColor = Color(0xFF001F3F); // FOR LIGHT BACKGROUND
 
-/// Main Color
-Color green77() => const Color(0xff8c30e9);
-Color green91() => const Color(0xff9EFFC1);
-Color blue64() => const Color(0xff1F3B64);
-LinearGradient greenGradint() => LinearGradient(
-    colors: [green77(), green91()],
-    begin: Alignment.bottomCenter,
-    end: Alignment.topCenter);
-
-// use in drawer background color
-Color green63 = const Color(0xff8c30e9);
 
 // grey Shade
 Color grey33 = const Color(0xff2F3133);

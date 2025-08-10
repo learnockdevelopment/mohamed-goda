@@ -53,7 +53,7 @@ class AssignmentHistoryWidget{
                   child: Container(
                     padding: padding(horizontal: 16, vertical: 16),
                     decoration: BoxDecoration(
-                      color: data.sender == null ? green77() : greyE7,
+                      color: data.sender == null ? primaryColor : greyE7,
 
                       borderRadius: BorderRadiusDirectional.only(
                         topEnd: const Radius.circular(20),
@@ -214,7 +214,7 @@ class AssignmentHistoryWidget{
                         width: getSize().width,
                         height: 52,
                         text: appText.send, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -251,9 +251,9 @@ class AssignmentHistoryWidget{
                     //     //   height: 52,
                     //     //   text: '', 
                     //     //   bgColor: Colors.white, 
-                    //     //   textColor: green77(),
+                    //     //   textColor: primaryColor,
                     //     //   iconPath: AppAssets.attachmentSvg,
-                    //     //   borderColor: green77()
+                    //     //   borderColor: primaryColor
                     //     // ),
                         
                     //     // space(0,width: 16),
@@ -343,7 +343,7 @@ class AssignmentHistoryWidget{
                         width: getSize().width,
                         height: 52,
                         text: appText.submit, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),

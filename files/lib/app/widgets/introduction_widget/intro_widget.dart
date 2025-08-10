@@ -56,9 +56,9 @@ class IntroWidget{
               height: 52, 
               text: appText.getStart,
                 bgColor: Colors.white,
-                textColor: green77(),
+                textColor: primaryColor,
               borderColor: Colors.transparent,
-              boxShadow: boxShadow(green77().withOpacity(.3)),
+              boxShadow: boxShadow(primaryColor.withOpacity(.3)),
               raduis: 12
             )
           }else if(page == 4)...{ 
@@ -78,7 +78,7 @@ class IntroWidget{
                     bgColor: secondaryColor.withOpacity(0.6),
                     textColor: Colors.white,
                     borderColor: Colors.transparent,
-                    boxShadow: boxShadow(green77().withOpacity(.3)),
+                    boxShadow: boxShadow(primaryColor.withOpacity(.3)),
                     raduis: 12
                   ),
                 ),
@@ -94,8 +94,8 @@ class IntroWidget{
                     height: 52, 
                     text: appText.signup,
                     bgColor: Colors.white, 
-                    textColor: green77(), 
-                    borderColor: green77(),
+                    textColor: primaryColor, 
+                    borderColor: primaryColor,
                     raduis: 12
                   ),
                 ),

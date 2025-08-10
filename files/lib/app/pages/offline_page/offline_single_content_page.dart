@@ -215,7 +215,7 @@ class _OfflineSingleContentPageState extends State<OfflineSingleContentPage> {
                   width: getSize().width, 
                   height: 52, 
                   text: appText.back, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
               )

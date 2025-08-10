@@ -365,7 +365,7 @@ class _OfflineSingleCoursePageState extends State<OfflineSingleCoursePage> with 
                       
                       Expanded(
                         child: horizontalChapterItem(
-                          green77(), 
+                          primaryColor, 
                           AppAssets.categorySvg, 
                           contents[index].title ?? '', '${contents[index].items?.length ?? 0} ${appText.lessons}', 
                           (){

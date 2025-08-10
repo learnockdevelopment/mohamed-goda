@@ -49,7 +49,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage> {
                 ? LinearGradient(
                     colors: [
                       const Color(0xff7BFFAA),
-                      green77()
+                      primaryColor
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -99,7 +99,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage> {
                 height: 52, 
                 text: appText.back, 
                 bgColor: Colors.white, 
-                textColor: status == 'success' ? green77() : red49,
+                textColor: status == 'success' ? primaryColor : red49,
                 raduis: 15
               ),
 

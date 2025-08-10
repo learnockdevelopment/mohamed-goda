@@ -131,7 +131,7 @@ class HomeWidget {
                                 width: getSize().width,
                                 height: 52,
                                 text: appText.continue_,
-                                bgColor: green77(),
+                                bgColor: primaryColor,
                                 textColor: Colors.white,
                                 isLoading: isLoading),
                           ),

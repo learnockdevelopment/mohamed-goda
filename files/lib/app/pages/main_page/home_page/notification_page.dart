@@ -68,7 +68,7 @@ class _NotificationPageState extends State<NotificationPage> {
                       height: 65,
             
                       decoration: BoxDecoration(
-                        color: green77(),
+                        color: primaryColor,
                         borderRadius: borderRadius(radius: 14)
                       ),
             

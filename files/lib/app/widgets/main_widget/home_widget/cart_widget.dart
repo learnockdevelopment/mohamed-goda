@@ -67,7 +67,7 @@ class CartWidget{
                     width: getSize().width, 
                     height: 52, 
                     text: appText.validate, 
-                    bgColor: green77(), 
+                    bgColor: primaryColor, 
                     textColor: Colors.white,
                     isLoading: isLoading
                   ),
@@ -227,7 +227,7 @@ class CartWidget{
                           width: getSize().width, 
                           height: 52, 
                           text: appText.submit, 
-                          bgColor: green77(), 
+                          bgColor: primaryColor, 
                           textColor: Colors.white,
                           isLoading: isLoading,
                           raduis: 15
@@ -245,8 +245,8 @@ class CartWidget{
                           height: 52, 
                           text: appText.banksInfo, 
                           bgColor: Colors.white, 
-                          textColor: green77(),
-                          borderColor: green77(),
+                          textColor: primaryColor,
+                          borderColor: primaryColor,
                           raduis: 15
                         ),
                       )

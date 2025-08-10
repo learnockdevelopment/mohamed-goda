@@ -154,7 +154,7 @@ class LearningWidget{
 
                       Expanded(
                         child: horizontalChapterItem(
-                          green77(), 
+                          primaryColor, 
                           AppAssets.categorySvg, 
                           contents[index].title ?? '', 
                           '${contents[index].items?.length ?? 0} ${appText.lessons
@@ -350,13 +350,13 @@ class LearningWidget{
           return blueFE;
           
         case 'success':
-          return green77();
+          return primaryColor;
         
         case 'neutral':
           return greyE7;
           
         default:
-          return green77();
+          return primaryColor;
       }
       
     }
@@ -417,7 +417,7 @@ class LearningWidget{
       onRefresh: () async{
         await onRefreshData();
       },
-      color: green77(),
+      color: primaryColor,
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
     
@@ -461,7 +461,7 @@ class LearningWidget{
                     
                     space(0,width: 16),
                     
-                    dashboardInfoBox(blue64(), AppAssets.provideresSvg, forumData?.activeUsersCount?.toString() ?? '-', appText.activeUsers, (){}, height: 145),
+                    dashboardInfoBox(primaryColor2, AppAssets.provideresSvg, forumData?.activeUsersCount?.toString() ?? '-', appText.activeUsers, (){}, height: 145),
                     
                   ],
                 ),
@@ -600,7 +600,7 @@ class LearningWidget{
               width: getSize().width, 
               height: 52, 
               text: appText.close, 
-              bgColor: green77(), 
+              bgColor: primaryColor, 
               textColor: Colors.white
             ),
             
@@ -654,7 +654,7 @@ class LearningWidget{
                   width: getSize().width, 
                   height: 52, 
                   text: appText.search, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
 
@@ -856,9 +856,9 @@ class LearningWidget{
                           height: 52,
                           text: '', 
                           bgColor: Colors.white, 
-                          textColor: green77(),
+                          textColor: primaryColor,
                           iconPath: AppAssets.attachmentSvg,
-                          borderColor: green77()
+                          borderColor: primaryColor
                         ),
                         space(0,width: 16),
 
@@ -891,7 +891,7 @@ class LearningWidget{
                             width: getSize().width,
                             height: 52,
                             text: appText.send, 
-                            bgColor: green77(), 
+                            bgColor: primaryColor, 
                             textColor: Colors.white,
                             isLoading: isLoading
                           )
@@ -987,7 +987,7 @@ class LearningWidget{
                     width: getSize().width,
                     height: 52,
                     text: isEdit ? appText.edit : appText.reply, 
-                    bgColor: green77(), 
+                    bgColor: primaryColor, 
                     textColor: Colors.white,
                     isLoading: isLoading
                   ),

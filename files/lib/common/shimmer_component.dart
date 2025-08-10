@@ -9,8 +9,8 @@ import 'package:webinar/locator.dart';
 
 Widget courseItemVerticallyShimmer() {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Container(
       margin: const EdgeInsetsDirectional.only(bottom: 16),
       decoration: BoxDecoration(borderRadius: borderRadius()),
@@ -81,8 +81,8 @@ Widget singleCourseShimmer({
   double borderRadius = 12.0,
 }) {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Padding(
       padding: EdgeInsets.all(16.0),
       child: Column(
@@ -232,8 +232,8 @@ Widget courseItemShimmer(
     double endCardPadding = 16.0,
     bool isShowReward = false}) {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Container(
       margin: EdgeInsetsDirectional.only(end: endCardPadding),
       width: width,
@@ -330,8 +330,8 @@ Widget courseItemShimmer(
 
 Widget classesCourseItemShimmer() {
   return Shimmer.fromColors(
-      baseColor: greyE7,
-      highlightColor: greyF8,
+      baseColor: primaryColor.withOpacity(0.1),
+      highlightColor: primaryColor.withOpacity(0.05),
       child: Container(
         margin: const EdgeInsetsDirectional.only(bottom: 16),
         decoration: BoxDecoration(borderRadius: borderRadius()),
@@ -428,8 +428,8 @@ Widget classesCourseItemShimmer() {
 
 Widget blogItemShimmer() {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Container(
       width: getSize().width,
       padding: padding(horizontal: 10, vertical: 10),
@@ -480,8 +480,8 @@ Widget blogItemShimmer() {
 
 Widget userProfileCardShimmer() {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Container(
       width: 155,
       height: 195,
@@ -516,8 +516,8 @@ Widget userProfileCardShimmer() {
 
 Widget horizontalCategoryItemShimmer() {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Container(
       width: getSize().width * .7,
       margin: const EdgeInsetsDirectional.only(end: 16),
@@ -552,8 +552,8 @@ Widget horizontalCategoryItemShimmer() {
 
 Widget categoryItemShimmer() {
   return Shimmer.fromColors(
-    baseColor: greyE7,
-    highlightColor: greyF8,
+    baseColor: primaryColor.withOpacity(0.1),
+    highlightColor: primaryColor.withOpacity(0.05),
     child: Padding(
       padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
       child: Row(
@@ -587,7 +587,7 @@ Widget shimmerUi(
     width: width,
     height: height,
     decoration: BoxDecoration(
-      color: grey33,
+      color: primaryColor.withOpacity(0.1),
       borderRadius: borderRadius(radius: radius),
     ),
   );

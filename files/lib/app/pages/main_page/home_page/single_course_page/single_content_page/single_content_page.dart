@@ -422,8 +422,8 @@ class _SingleContentPageState extends State<SingleContentPage> {
                                         ? appText.addANote
                                         : appText.viewNote,
                                     bgColor: Colors.white,
-                                    textColor: green77(),
-                                    borderColor: green77(),
+                                    textColor: primaryColor,
+                                    borderColor: primaryColor,
                                     raduis: 15)),
 
                             if (note != null) ...{
@@ -566,7 +566,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                       width: getSize().width,
                       height: 52,
                       text: appText.download,
-                      bgColor: green77(),
+                      bgColor: primaryColor,
                       textColor: Colors.white),
                 ),
                 if (showViewButton) ...{
@@ -640,7 +640,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                       height: 52,
                       text: buttonText(singleContentData?.storage ?? '',
                           singleContentData?.fileType ?? ''),
-                      bgColor: green77(),
+                      bgColor: primaryColor,
                       textColor: Colors.white),
                 ),
               }
@@ -657,7 +657,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                       width: getSize().width,
                       height: 52,
                       text: appText.back,
-                      bgColor: green77(),
+                      bgColor: primaryColor,
                       textColor: Colors.white)),
               space(0, width: 14),
 
@@ -693,7 +693,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                   width: 55,
                   height: 52,
                   decoration: BoxDecoration(
-                    color: green77(),
+                    color: primaryColor,
                     borderRadius: borderRadius(),
                   ),
                   child: isSpeakLoading
@@ -758,7 +758,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                       bgColor:
                       (singleContentData?.isFinished ?? false)
                           ? greyCF.withOpacity(.8)
-                          : green77(),
+                          : primaryColor,
                       textColor: Colors.white)),
 
               space(0, width: 16),
@@ -837,10 +837,10 @@ class _SingleContentPageState extends State<SingleContentPage> {
                     bgColor: Colors.white,
                     textColor: (singleContentData?.isFinished ?? false)
                         ? greyCF
-                        : green77(),
+                        : primaryColor,
                     borderColor: (singleContentData?.isFinished ?? false)
                         ? greyCF.withOpacity(.8)
-                        : green77(),
+                        : primaryColor,
                   )),
 
 

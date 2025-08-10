@@ -30,7 +30,7 @@ class FloatingActionButtonMenu extends StatelessWidget {
     return SpeedDial(
       icon: Icons.grid_view_rounded, // Grid-like menu icon
       activeIcon: Icons.close_rounded,
-      backgroundColor: green77(),
+      backgroundColor: primaryColor,
       overlayColor: Colors.black,
       overlayOpacity: 0.6,
       spacing: 14,

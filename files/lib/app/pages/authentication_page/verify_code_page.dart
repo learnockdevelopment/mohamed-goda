@@ -262,7 +262,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             width: getSize().width,
                             height: 52,
                             text: appText.verifyMyAccount,
-                            bgColor: isEmptyInputs ? greyCF : green77(),
+                            bgColor: isEmptyInputs ? greyCF : primaryColor,
                             textColor: Colors.white,
                             borderColor: Colors.transparent,
                             isLoading: isSendingData,

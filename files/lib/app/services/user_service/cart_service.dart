@@ -266,7 +266,7 @@ class CartService {
                           );
                         },
                         style: TextButton.styleFrom(
-                          backgroundColor: green77(),
+                          backgroundColor: primaryColor,
                           foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(
                               vertical: 12, horizontal: 20),

@@ -248,7 +248,7 @@ class _CertificatesDetailsPageState extends State<CertificatesDetailsPage> {
                           width: getSize().width, 
                           height: 51, 
                           text: appText.download, 
-                          bgColor: green77(), 
+                          bgColor: primaryColor, 
                           textColor: Colors.white
                         ),
                       ),
@@ -272,8 +272,8 @@ class _CertificatesDetailsPageState extends State<CertificatesDetailsPage> {
                           height: 52, 
                           text: appText.share, 
                           bgColor: Colors.white, 
-                          textColor: green77(),
-                          borderColor: green77()
+                          textColor: primaryColor,
+                          borderColor: primaryColor
                         ),
                       ),
                       

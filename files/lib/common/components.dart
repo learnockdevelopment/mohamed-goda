@@ -94,7 +94,7 @@ Widget courseSliderItem(CourseModel courseData, {int horizontalPadding = 20}) {
                           (courseData.price == 0)
                               ? appText.free
                               : CurrencyUtils.calculator(courseData.price ?? 0),
-                          style: style14Regular().copyWith(color: green77()),
+                          style: style14Regular().copyWith(color: primaryColor),
                         ),
                       ),
                     ),
@@ -283,7 +283,7 @@ Widget courseItem(CourseModel courseData,
                         ],
                       ),
                       child: SvgPicture.asset(AppAssets.notificationSvg,
-                          width: 16, color: blue64()),
+                          width: 16, color: primaryColor2),
                     ),
                   ),
                 ),
@@ -371,7 +371,7 @@ Widget courseItem(CourseModel courseData,
                             style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: green77()),
+                                color: primaryColor),
                           ),
                         Text(
                           courseData.price == 0
@@ -386,7 +386,7 @@ Widget courseItem(CourseModel courseData,
                             fontWeight: FontWeight.w600,
                             color: (courseData.discountPercent ?? 0) > 0
                                 ? Colors.red
-                                : green77(),
+                                : primaryColor,
                             // color in colors file
                             decoration: (courseData.discountPercent ?? 0) > 0
                                 ? TextDecoration.lineThrough
@@ -416,7 +416,7 @@ Widget courseItem(CourseModel courseData,
                           textColor: Colors.white,
                           borderColor: Colors.transparent,
                           textFontWeight: FontWeight.bold,
-                          boxShadow: boxShadow(green77().withOpacity(.3)),
+                          boxShadow: boxShadow(primaryColor.withOpacity(.3)),
                           raduis: 16)
                   ],
                 ),
@@ -603,7 +603,7 @@ void _addToCalendar(CourseModel courseData) {
 //                                 ),
 //
 //                                 alignment: Alignment.center,
-//                                 child: SvgPicture.asset(AppAssets.notificationSvg,colorFilter: ColorFilter.mode(blue64(), BlendMode.srcIn),width: 12,),
+//                                 child: SvgPicture.asset(AppAssets.notificationSvg,colorFilter: ColorFilter.mode(primaryColor2, BlendMode.srcIn),width: 12,),
 //                               )
 //                             ),
 //                           }
@@ -815,9 +815,9 @@ void _addToCalendar(CourseModel courseData) {
 //                               ? appText.free
 //                               : CurrencyUtils.calculator(courseData.price ?? 0),
 //                             style: style12Regular().copyWith(
-//                               color: (courseData.discountPercent ?? 0) > 0 ? greyCF : green77(),
+//                               color: (courseData.discountPercent ?? 0) > 0 ? greyCF : primaryColor,
 //                               decoration: (courseData.discountPercent ?? 0) > 0 ? TextDecoration.lineThrough : TextDecoration.none,
-//                               decorationColor: (courseData.discountPercent ?? 0) > 0 ? greyCF : green77(),
+//                               decorationColor: (courseData.discountPercent ?? 0) > 0 ? greyCF : primaryColor,
 //                             ),
 //                           ),
 //                         },
@@ -830,7 +830,7 @@ void _addToCalendar(CourseModel courseData) {
 //                               (courseData.price ?? 0) - ((courseData.price ?? 0) * (courseData.discountPercent ?? 0) ~/ 100)
 //                             ),
 //                             style: style14Regular().copyWith(
-//                               color: green77(),
+//                               color: primaryColor,
 //                             ),
 //                           ),
 //                         },
@@ -1121,7 +1121,7 @@ Widget _buildPriceSection(CourseModel courseData, bool isFree, bool hasDiscount)
                 : courseData.price ?? 0
         ),
         style: TextStyle(
-          color: hasDiscount ? green77() : Colors.black,
+          color: hasDiscount ? primaryColor : Colors.black,
           fontSize: 16,
           fontWeight: FontWeight.w700,
         ),
@@ -1185,7 +1185,7 @@ Widget _buildCalendarButton(CourseModel courseData) {
           ),
         ],
       ),
-      child: Icon(Icons.calendar_today_rounded, size: 18, color: blue64()),
+      child: Icon(Icons.calendar_today_rounded, size: 18, color: primaryColor2),
     ),
   );
 }
@@ -1252,7 +1252,7 @@ Widget input(
         child: TextFormField(
           controller: controller,
           focusNode: node,
-          cursorColor: green77(),
+          cursorColor: primaryColor,
           readOnly: isReadOnly,
           onTap: () => onTap?.call(),
           onChanged: (text) => onChange?.call(text),
@@ -1437,7 +1437,7 @@ Widget descriptionInput(
         border: OutlineInputBorder(
           borderRadius: borderRadius(radius: radius),
           borderSide: BorderSide(
-              color: isBorder ? greyE7 : Colors.transparent, width: 1),
+              color: isBorder ? primaryColor.withOpacity(0.3) : Colors.transparent, width: 1),
         ),
 
         errorBorder: OutlineInputBorder(
@@ -1452,12 +1452,12 @@ Widget descriptionInput(
         enabledBorder: OutlineInputBorder(
             borderRadius: borderRadius(radius: radius),
             borderSide: BorderSide(
-                color: isBorder ? greyE7 : Colors.transparent, width: 1)),
+                color: isBorder ? primaryColor.withOpacity(0.3) : Colors.transparent, width: 1)),
 
         focusedBorder: OutlineInputBorder(
           borderRadius: borderRadius(radius: radius),
           borderSide: BorderSide(
-              color: isBorder ? greyE7 : Colors.transparent, width: 1),
+              color: isBorder ? primaryColor : Colors.transparent, width: 1),
         ),
       ),
     ),
@@ -1756,7 +1756,7 @@ Widget switchButton(
     children: [
       Text(
         title,
-        style: style14Regular().copyWith(color: grey3A),
+        style: style14Regular().copyWith(color: primaryColor2),
       ),
       GestureDetector(
         onTap: () {
@@ -1780,7 +1780,7 @@ Widget switchButton(
             height: 6,
             clipBehavior: Clip.none,
             decoration: BoxDecoration(
-              color: state ? green77() : greyE7,
+              color: state ? primaryColor : greyE7,
               borderRadius: borderRadius(radius: 30),
             ),
             child: Stack(
@@ -1799,7 +1799,7 @@ Widget switchButton(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.white, width: 4),
-                        color: state ? green77() : greyE7,
+                        color: state ? primaryColor : greyE7,
                         boxShadow: [
                           boxShadow(greyD0.withOpacity(.4), blur: 10, y: 3)
                         ]),
@@ -1831,13 +1831,13 @@ Widget radioButton(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: Colors.white, width: 6),
-              color: state ? green77() : greyE7,
+              color: state ? primaryColor : greyE7,
               boxShadow: [boxShadow(greyD0.withOpacity(.38), blur: 10, y: 3)]),
         ),
         space(0, width: 8),
         Text(
           title,
-          style: style14Regular().copyWith(color: grey3A),
+          style: style14Regular().copyWith(color: primaryColor2),
         ),
       ],
     ),
@@ -1856,7 +1856,7 @@ Widget checkButton(
       children: [
         Text(
           title,
-          style: style14Regular().copyWith(color: grey3A),
+          style: style14Regular().copyWith(color: primaryColor2),
         ),
         AnimatedContainer(
           duration: const Duration(milliseconds: 200),
@@ -1865,9 +1865,9 @@ Widget checkButton(
           decoration: BoxDecoration(
             borderRadius: borderRadius(radius: 5),
             border: Border.all(
-              color: state ? green77() : greyCF,
+              color: state ? primaryColor : greyCF,
             ),
-            color: state ? green77() : Colors.white,
+            color: state ? primaryColor : Colors.white,
           ),
           alignment: Alignment.center,
           child: SvgPicture.asset(AppAssets.checkSvg),
@@ -1954,7 +1954,7 @@ AppBar appbar({
       child: Padding(
         padding: const EdgeInsets.only(bottom: 0),
         child: Container(
-          color: green77(),
+          color: primaryColor,
         ),
       ),
     ),
@@ -2225,7 +2225,7 @@ showSnackBar(ErrorEnum type, String? title,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: borderRadius(),
-          border: Border.all(color: greyE7, width: 1)),
+          border: Border.all(color: primaryColor.withOpacity(0.2), width: 1)),
       child: Row(
         children: [
           Container(
@@ -2233,7 +2233,7 @@ showSnackBar(ErrorEnum type, String? title,
             height: 45,
             decoration: BoxDecoration(
                 color: type == ErrorEnum.success
-                    ? green77()
+                    ? primaryColor
                     : type == ErrorEnum.error
                         ? red49
                         : yellow29,
@@ -2304,8 +2304,8 @@ Widget userProfileCard(UserModel user, Function onTap) {
                   color: user.meetingStatus == 'no'
                       ? red49.withOpacity(.3)
                       : user.meetingStatus == 'available'
-                          ? green77().withOpacity(.3)
-                          : greyCF.withOpacity(.3),
+                          ? primaryColor.withOpacity(.3)
+                          : primaryColor.withOpacity(.3),
                 ),
                 alignment: Alignment.center,
                 child: SvgPicture.asset(
@@ -2314,9 +2314,9 @@ Widget userProfileCard(UserModel user, Function onTap) {
                   colorFilter: ColorFilter.mode(
                       user.meetingStatus == 'no'
                           ? red49
-                          : user.meetingStatus == 'available'
-                              ? green77()
-                              : greyCF,
+                                                : user.meetingStatus == 'available'
+                          ? primaryColor
+                          : primaryColor,
                       BlendMode.srcIn),
                 ),
               ),
@@ -2370,7 +2370,7 @@ Widget userProfileCard(UserModel user, Function onTap) {
 //                   color: user.meetingStatus == 'no'
 //                       ? red49.withOpacity(.3)
 //                       : user.meetingStatus == 'available'
-//                           ? green77().withOpacity(.3)
+//                           ? primaryColor.withOpacity(.3)
 //                           : greyCF.withOpacity(.3)),
 //               alignment: Alignment.center,
 //               child: SvgPicture.asset(
@@ -2380,7 +2380,7 @@ Widget userProfileCard(UserModel user, Function onTap) {
 //                     user.meetingStatus == 'no'
 //                         ? red49
 //                         : user.meetingStatus == 'available'
-//                             ? green77()
+//                             ? primaryColor
 //                             : greyCF,
 //                     BlendMode.srcIn),
 //               ),
@@ -2526,7 +2526,7 @@ Widget userCard(String image, String title, String desc, String date,
                       if (price.isNotEmpty) ...{
                         Text(
                           price,
-                          style: style16Regular().copyWith(color: green77()),
+                          style: style16Regular().copyWith(color: primaryColor),
                         )
                       },
 
@@ -2538,7 +2538,7 @@ Widget userCard(String image, String title, String desc, String date,
                               AppAssets.badgeSvg,
                               colorFilter: ColorFilter.mode(
                                   gradeStatus == 'passed'
-                                      ? green77()
+                                      ? primaryColor
                                       : gradeStatus == 'waiting'
                                           ? yellow29
                                           : gradeStatus == 'failed'
@@ -2554,7 +2554,7 @@ Widget userCard(String image, String title, String desc, String date,
                               userGrade,
                               style: style12Regular().copyWith(
                                 color: gradeStatus == 'passed'
-                                    ? green77()
+                                    ? primaryColor
                                     : gradeStatus == 'waiting'
                                         ? yellow29
                                         : gradeStatus == 'failed'
@@ -2593,7 +2593,7 @@ Widget tabBar(
         indicator: RoundedTabIndicator(),
         labelStyle: style14Regular(),
         unselectedLabelStyle: style14Regular(),
-        labelColor: grey3A,
+        labelColor: primaryColor2,
         dividerColor: Colors.transparent,
         labelPadding: padding(horizontal: 10),
         overlayColor: const MaterialStatePropertyAll(Colors.transparent),
@@ -2853,7 +2853,7 @@ Widget dropDown(
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: borderRadius(),
-            border: isBorder ? Border.all(color: greyE7, width: 1) : null),
+            border: isBorder ? Border.all(color: primaryColor.withOpacity(0.2), width: 1) : null),
         child: Column(
           children: [
             GestureDetector(
@@ -2883,7 +2883,7 @@ Widget dropDown(
                         !isOpen
                             ? Icons.keyboard_arrow_down_rounded
                             : Icons.keyboard_arrow_up_rounded,
-                        color: greyE7,
+                        color: primaryColor.withOpacity(0.6),
                       )
                     ],
                   ),
@@ -2979,7 +2979,7 @@ Widget faqDropDown(
                 width: 55,
                 height: 55,
                 decoration: BoxDecoration(
-                    color: green77(), borderRadius: borderRadius(radius: 8)),
+                    color: primaryColor, borderRadius: borderRadius(radius: 8)),
                 alignment: Alignment.center,
                 child: SvgPicture.asset(AppAssets.questionSvg),
               ),
@@ -3076,7 +3076,7 @@ Widget commentUi(Comments comment, Function onTapOption) {
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: borderRadius(),
-                  border: Border.all(color: greyE7)),
+                  border: Border.all(color: primaryColor.withOpacity(0.2))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -3294,7 +3294,7 @@ Widget forumQuestionItem(Forums question, Function changeState,
                   child: Container(
                     padding: padding(horizontal: 4, vertical: 4),
                     decoration: BoxDecoration(
-                      color: green77(),
+                      color: primaryColor,
                       borderRadius: borderRadius(radius: 50),
                     ),
                     child: Row(
@@ -3396,7 +3396,7 @@ Widget forumQuestionItem(Forums question, Function changeState,
                         Container(
                           width: 1,
                           height: 35,
-                          color: greyE7,
+                          color: primaryColor.withOpacity(0.3),
                         ),
 
                         // last activity
@@ -3594,7 +3594,7 @@ Widget forumAnswerItem(ForumAnswerModel answer, Function changeState,
                   Container(
                     padding: padding(horizontal: 4, vertical: 4),
                     decoration: BoxDecoration(
-                      color: green77(),
+                      color: primaryColor,
                       borderRadius: borderRadius(radius: 50),
                     ),
                     child: Row(
@@ -3646,14 +3646,14 @@ Widget helperBox(String icon, String title, String subTitle,
     padding: padding(vertical: 9, horizontal: 9),
     margin: padding(horizontal: horizontalPadding.toDouble()),
     decoration: BoxDecoration(
-        border: Border.all(color: greyE7), borderRadius: borderRadius()),
+        border: Border.all(color: primaryColor.withOpacity(0.2)), borderRadius: borderRadius()),
     child: Row(
       children: [
         // icon
         Container(
           width: 45,
           height: 45,
-          decoration: BoxDecoration(color: green77(), shape: BoxShape.circle),
+          decoration: BoxDecoration(color: primaryColor, shape: BoxShape.circle),
           alignment: Alignment.center,
           child: SvgPicture.asset(
             icon,
@@ -3728,9 +3728,9 @@ Future downloadSheet(String downloadUrl, String name,
           ),
           space(6),
           LinearProgressIndicator(
-            backgroundColor: green77().withOpacity(.2),
+            backgroundColor: primaryColor.withOpacity(.2),
             value: progress,
-            valueColor: AlwaysStoppedAnimation<Color>(green77()),
+            valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
           ),
           space(40),
           button(
@@ -3746,7 +3746,7 @@ Future downloadSheet(String downloadUrl, String name,
               width: getSize().width,
               height: 52,
               text: appText.cancel,
-              bgColor: green77(),
+              bgColor: primaryColor,
               textColor: Colors.white),
           space(30),
         ],

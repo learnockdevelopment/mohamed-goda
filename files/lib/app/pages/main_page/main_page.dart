@@ -131,7 +131,7 @@ class _MainPageState extends State<MainPage> {
                       ? FloatingActionButtonLocation.startFloat
                       : FloatingActionButtonLocation.endFloat,
                   resizeToAvoidBottomInset: false,
-                  backgroundColor: green77(),
+                  backgroundColor: primaryColor,
                   body: Consumer<PageProvider>(
                     builder: (context, pageProvider, _) {
                       return SafeArea(
@@ -163,7 +163,7 @@ class _MainPageState extends State<MainPage> {
                             child: Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8.0),
                               child: GNav(
-                                rippleColor: green77().withOpacity(0.3),
+                                rippleColor: primaryColor.withOpacity(0.3),
                                 hoverColor: Colors.grey.shade700,
                                 haptic: true,
                                 tabBorderRadius: 16,
@@ -172,9 +172,9 @@ class _MainPageState extends State<MainPage> {
                                 gap: 8,
                                 padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
                                 color: Colors.grey,
-                                activeColor: green77(),
+                                activeColor: primaryColor,
                                 iconSize: 24,
-                                tabBackgroundColor: green77().withOpacity(0.1),
+                                tabBackgroundColor: primaryColor.withOpacity(0.1),
                                 backgroundColor: Colors.transparent,
                                 tabs: [
                                   GButton(

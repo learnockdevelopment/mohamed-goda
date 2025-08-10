@@ -52,7 +52,7 @@ class NotificationWidget{
               width: getSize().width, 
               height: 52, 
               text: appText.close, 
-              bgColor: green77(), 
+              bgColor: primaryColor, 
               textColor: Colors.white
             ),
 

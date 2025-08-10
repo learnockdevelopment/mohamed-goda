@@ -111,7 +111,7 @@ class _ConversationPageState extends State<ConversationPage> {
                               width: 45,
                               height: 45,
                               decoration: BoxDecoration(
-                                color: green77(),
+                                color: primaryColor,
                                 shape: BoxShape.circle,
                               ),
                               alignment: Alignment.center,
@@ -248,7 +248,7 @@ class _ConversationPageState extends State<ConversationPage> {
                         width: getSize().width,
                         height: 52,
                         text: appText.send, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoadingSendMessage
                       ),

@@ -77,7 +77,7 @@ class MeetingWidget{
                         width: getSize().width,
                         height: 52,
                         text: appText.send, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -206,7 +206,7 @@ class MeetingWidget{
                       if(isLoading)...{
                         space(0,width: 8),
 
-                        loading(color: green77())
+                        loading(color: primaryColor)
                       }
       
                     ],
@@ -344,12 +344,12 @@ class MeetingWidget{
                   width: 100,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: green77().withOpacity(.3),
+                    color: primaryColor.withOpacity(.3),
                     shape: BoxShape.circle
                   ),
                   alignment: Alignment.center,
 
-                  child: SvgPicture.asset(AppAssets.videoSvg, colorFilter: ColorFilter.mode(green77(), BlendMode.srcIn), width: 40,),
+                  child: SvgPicture.asset(AppAssets.videoSvg, colorFilter: ColorFilter.mode(primaryColor, BlendMode.srcIn), width: 40,),
                 ),
 
                 space(30),
@@ -386,7 +386,7 @@ class MeetingWidget{
                   width: getSize().width, 
                   height: 51, 
                   text: appText.create, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white,
                   isLoading: isLoading
                 ),

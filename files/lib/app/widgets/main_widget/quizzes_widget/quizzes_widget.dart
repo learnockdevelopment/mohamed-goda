@@ -119,7 +119,7 @@ class QuizzesWidget{
                               AppAssets.badgeSvg, 
                               colorFilter: ColorFilter.mode(
                                 status == 'passed'
-                                ? green77()
+                                ? primaryColor
                                 : status == 'waiting'
                                   ? yellow29
                                   : status == 'failed'
@@ -136,7 +136,7 @@ class QuizzesWidget{
                               '$userGrade',
                               style: style12Regular().copyWith(
                                 color: status == 'passed'
-                                  ? green77()
+                                  ? primaryColor
                                   : status == 'waiting'
                                     ? yellow29
                                     : status == 'failed'

@@ -224,7 +224,7 @@ class _OptionsFilterState extends State<OptionsFilter> {
                     width: getSize().width,
                     height: 52,
                     text: appText.applyOptions,
-                    bgColor: green77(),
+                    bgColor: primaryColor,
                     textColor: Colors.white),
                 space(30),
               ],

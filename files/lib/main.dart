@@ -173,7 +173,7 @@ void showBlockingAlert() {
                   children: [
                     Icon(
                       Icons.warning_amber_rounded,
-                      color: green77(),
+                      color: primaryColor,
                       // Primary color
                       size: 80.0,
                     ),
@@ -202,7 +202,7 @@ void showBlockingAlert() {
               actions: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: green77(),
+                    backgroundColor: primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                     ),

@@ -98,7 +98,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                           return isLoading
                               ? horizontalCategoryItemShimmer()
                               : horizontalCategoryItem(
-                                  trendCategories[index].color ?? green77(),
+                                  trendCategories[index].color ?? primaryColor,
                                   trendCategories[index].icon ?? '',
                                   trendCategories[index].title ?? '',
                                   trendCategories[index]

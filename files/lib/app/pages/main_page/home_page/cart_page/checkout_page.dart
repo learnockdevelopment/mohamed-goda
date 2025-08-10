@@ -116,7 +116,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                               color: Colors.white,
                               borderRadius: borderRadius(),
                               border: Border.all(
-                                color: (checkoutData?.paymentChannels?[index].id == selectedPaymentChannels?.id) ? green77() : Colors.white,
+                                color: (checkoutData?.paymentChannels?[index].id == selectedPaymentChannels?.id) ? primaryColor : Colors.white,
                                 width: 2
                               )
                             ),
@@ -283,7 +283,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           width: getSize().width, 
                           height: 52, 
                           text: appText.startPayment, 
-                          bgColor: green77(), 
+                          bgColor: primaryColor, 
                           textColor: Colors.white,
                           isLoading: isLoadingStartPay
                         ),

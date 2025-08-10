@@ -256,7 +256,7 @@ class _LoginPageState extends State<LoginPage> {
       height: 52,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: green77(), // Custom color
+          backgroundColor: primaryColor, // Custom color
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(22), // Rounded corners
           ),
@@ -419,7 +419,7 @@ class _LoginPageState extends State<LoginPage> {
         height: 52,
         text: appText.signup,
         fontSize: 16,
-        bgColor: green77(),
+        bgColor: primaryColor,
         textColor: Colors.white,
         borderColor: Colors.transparent,
       ),
@@ -495,7 +495,7 @@ class _LoginPageState extends State<LoginPage> {
             MediaQuery.of(context).size.width * 0.9, // 90% of the screen width
         height: 52,
         text: appText.login,
-        bgColor: isEmptyInputs ? greyCF : green77(),
+        bgColor: isEmptyInputs ? greyCF : primaryColor,
         textColor: Colors.white,
         borderColor: Colors.transparent,
       ),

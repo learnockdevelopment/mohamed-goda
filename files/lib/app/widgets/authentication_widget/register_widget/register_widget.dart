@@ -151,9 +151,9 @@ class RegisterWidget{
                         width: getSize().width, 
                         height: 52, 
                         text: appText.cancel, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white, 
-                        borderColor: green77()
+                        borderColor: primaryColor
                       ),
           
                       space(11),

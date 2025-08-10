@@ -332,12 +332,12 @@ class _UserProfilePageState extends State<UserProfilePage>
                                   : appText
                                       .login, // Show "Login" if the user is not logged in
                               bgColor: ((profile?.authUserIsFollower ?? false)
-                                  ? green77().withOpacity(0.3)
-                                  : green77()),
+                                  ? primaryColor.withOpacity(0.3)
+                                  : primaryColor),
                               textColor: ((profile?.authUserIsFollower ?? false)
-                                  ? green77()
+                                  ? primaryColor
                                   : Colors.white), // Optional color distinction
-                              borderColor: green77(),
+                              borderColor: primaryColor,
                             ),
                           ),
                           if (profile?.publicMessage == 1) ...{
@@ -351,7 +351,7 @@ class _UserProfilePageState extends State<UserProfilePage>
                                     width: getSize().width,
                                     height: 51,
                                     text: appText.sendMessage,
-                                    bgColor: green77(),
+                                    bgColor: primaryColor,
                                     textColor: Colors.white)),
                           }
                         ],
@@ -417,7 +417,7 @@ class _UserProfilePageState extends State<UserProfilePage>
                                                 ?.meeting?.priceWithDiscount ??
                                             0),
                                         style: style16Bold()
-                                            .copyWith(color: green77()),
+                                            .copyWith(color: primaryColor),
                                       ),
                                   ],
                                 ),
@@ -434,7 +434,7 @@ class _UserProfilePageState extends State<UserProfilePage>
                               width: getSize().width,
                               height: 51,
                               text: appText.reserveMeeting,
-                              bgColor: green77(),
+                              bgColor: primaryColor,
                               textColor: Colors.white,
                             ),
                           ] else ...[
@@ -447,7 +447,7 @@ class _UserProfilePageState extends State<UserProfilePage>
                               width: getSize().width,
                               height: 51,
                               text: appText.login,
-                              bgColor: green77(),
+                              bgColor: primaryColor,
                               textColor: Colors.white,
                             ),
                           ],

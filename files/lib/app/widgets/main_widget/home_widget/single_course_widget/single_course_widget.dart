@@ -546,13 +546,13 @@ class SingleCourseWidget {
                       Container(
                         padding: padding(horizontal: 6, vertical: 4),
                         decoration: BoxDecoration(
-                          color: greyE7,
+                          color: primaryColor.withOpacity(0.2),
                           borderRadius: borderRadius(radius: 20),
                         ),
                         child: Text(
                           '${courseData.reviewsCount ?? 0} ${appText.reviews}',
                           style: style10Regular()
-                              .copyWith(color: greyB2, height: 1),
+                              .copyWith(color: primaryColor2, height: 1),
                         ),
                       ),
 
@@ -727,7 +727,7 @@ class SingleCourseWidget {
             height: 37,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: greyE7.withOpacity(.5), shape: BoxShape.circle),
+                color: primaryColor.withOpacity(0.2), shape: BoxShape.circle),
             child: SvgPicture.asset(
               iconPath,
               width: 17,
@@ -836,8 +836,8 @@ class SingleCourseWidget {
                           border: Border.all(
                               color: (selectedTicket?.id ?? -1) ==
                                       courseData.tickets[index].id
-                                  ? green77()
-                                  : greyE7,
+                                  ? primaryColor
+                                  : primaryColor.withOpacity(0.3),
                               width: 1)),
                       child: Row(
                         children: [
@@ -847,8 +847,8 @@ class SingleCourseWidget {
                             decoration: BoxDecoration(
                               color:
                                   (courseData.tickets[index].isValid ?? false)
-                                      ? green77()
-                                      : greyCF,
+                                      ? primaryColor
+                                      : primaryColor.withOpacity(0.3),
                               shape: BoxShape.circle,
                             ),
                             alignment: Alignment.center,
@@ -884,7 +884,7 @@ class SingleCourseWidget {
                                               .priceWithTicketDiscount ??
                                           0),
                                       style: style12Regular()
-                                          .copyWith(color: green77()),
+                                          .copyWith(color: primaryColor),
                                     )
                                   ],
                                 )
@@ -921,7 +921,7 @@ class SingleCourseWidget {
                         border: Border.all(
                             color: (selectedType ?? '') == 'point'
                                 ? yellow29
-                                : greyE7,
+                                : primaryColor.withOpacity(0.3),
                             width: 1)),
                     child: Row(
                       children: [
@@ -931,7 +931,7 @@ class SingleCourseWidget {
                           decoration: BoxDecoration(
                             color: (selectedType ?? '') == 'point'
                                 ? yellow29
-                                : greyCF,
+                                : primaryColor.withOpacity(0.3),
                             shape: BoxShape.circle,
                           ),
                           alignment: Alignment.center,
@@ -1042,7 +1042,7 @@ class SingleCourseWidget {
                   text: (selectedType ?? '') == 'point'
                       ? appText.purchase
                       : appText.addToCart,
-                  bgColor: green77(),
+                  bgColor: primaryColor,
                   textColor: Colors.white,
                   isLoading: isLoading),
             ),
@@ -1197,7 +1197,7 @@ class SingleCourseWidget {
                       width: getSize().width,
                       height: 52,
                       text: appText.submit,
-                      bgColor: green77(),
+                      bgColor: primaryColor,
                       textColor: Colors.white,
                       isLoading: isLoading),
                 ),
@@ -1438,7 +1438,7 @@ class SingleCourseWidget {
                   width: getSize().width,
                   height: 52,
                   text: appText.report,
-                  bgColor: green77(),
+                  bgColor: primaryColor,
                   textColor: Colors.white),
               space(20),
             ],
@@ -1500,7 +1500,7 @@ class SingleCourseWidget {
                     width: getSize().width,
                     height: 52,
                     text: appText.saveNote,
-                    bgColor: green77(),
+                    bgColor: primaryColor,
                     textColor: Colors.white,
                     isLoading: isLoading),
               ),
@@ -1559,8 +1559,8 @@ class SingleCourseWidget {
                         text: '',
                         bgColor: Colors.white,
                         textColor: Colors.white,
-                        borderColor: green77(),
-                        iconColor: green77(),
+                        borderColor: primaryColor,
+                        iconColor: primaryColor,
                         iconPath: AppAssets.attachmentSvg),
                     space(0, width: 16),
                   },
@@ -1572,7 +1572,7 @@ class SingleCourseWidget {
                       width: getSize().width,
                       height: 52,
                       text: appText.editNote,
-                      bgColor: green77(),
+                      bgColor: primaryColor,
                       textColor: Colors.white,
                     ),
                   ),

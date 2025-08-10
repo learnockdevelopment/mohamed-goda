@@ -129,10 +129,10 @@ class QuizWidget{
                 ? Colors.white 
                 : (userAnswer.answer.toString() != answer.id.toString())
                   ? Colors.white
-                  : (userAnswer.status ?? false) ? green77() : red49,
+                  : (userAnswer.status ?? false) ? primaryColor : red49,
               width: 2.2
             )
-          : Border.all(color: answer.isSelected ? green77() : Colors.white.withOpacity(0), width: 2.2),
+          : Border.all(color: answer.isSelected ? primaryColor : Colors.white.withOpacity(0), width: 2.2),
 
         image: answer.image == null 
           ? null 
@@ -179,13 +179,13 @@ class QuizWidget{
 
                   color: isReview                
                 ? userAnswer?.answer?.toString() == answer.id.toString()
-                  ? (userAnswer?.status ?? false) ? green77() : red49
+                  ? (userAnswer?.status ?? false) ? primaryColor : red49
                   : answer.image == null
                       ? greyA5
                       : Colors.white
                 
                 : answer.isSelected
-                    ? green77()
+                    ? primaryColor
                     : answer.image == null
                       ? greyA5
                       : Colors.white
@@ -201,7 +201,7 @@ class QuizWidget{
                 child: Container(
                   padding: padding(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: green77(),
+                    color: primaryColor,
                     borderRadius: borderRadius()
                   ),
 

@@ -190,10 +190,10 @@ class _SettingPageState extends State<SettingPage>
                             height: 95,
                             decoration: BoxDecoration(
                                 color: Colors.white,
-                                border: Border.all(color: green77(), width: 5),
+                                border: Border.all(color: primaryColor, width: 5),
                                 shape: BoxShape.circle,
                                 boxShadow: [
-                                  boxShadow(green77().withOpacity(.25),
+                                  boxShadow(primaryColor.withOpacity(.25),
                                       blur: 30, y: 2)
                                 ]),
                             alignment: Alignment.center,
@@ -450,7 +450,7 @@ class _SettingPageState extends State<SettingPage>
                     width: getSize().width,
                     height: 51,
                     text: appText.save,
-                    bgColor: green77(),
+                    bgColor: primaryColor,
                     textColor: Colors.white,
                     isLoading: isLoading),
               ),

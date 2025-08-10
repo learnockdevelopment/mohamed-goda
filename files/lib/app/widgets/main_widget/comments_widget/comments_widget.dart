@@ -196,7 +196,7 @@ class CommentsWidget{
                         width: getSize().width, 
                         height: 52, 
                         text: appText.reply,
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -273,7 +273,7 @@ class CommentsWidget{
                         width: getSize().width, 
                         height: 52, 
                         text: appText.report,
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -351,7 +351,7 @@ class CommentsWidget{
                         width: getSize().width, 
                         height: 52, 
                         text: appText.save,
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),

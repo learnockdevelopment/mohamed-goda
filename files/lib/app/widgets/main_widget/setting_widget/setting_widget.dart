@@ -333,7 +333,7 @@ class SettingWidget {
           //               width: getSize().width, 
           //               height: 52, 
           //               text: appText.camera,
-          //               bgColor: green77(), 
+          //               bgColor: primaryColor, 
           //               textColor: Colors.white,
           //               iconPath: AppAssets.camera2Svg,
           //               iconColor: Colors.white
@@ -350,7 +350,7 @@ class SettingWidget {
           //               width: getSize().width, 
           //               height: 52, 
           //               text: appText.upload,
-          //               bgColor: green77(), 
+          //               bgColor: primaryColor, 
           //               textColor: Colors.white,
           //               iconPath: AppAssets.uploadSvg,
           //               iconColor: Colors.white
@@ -389,7 +389,7 @@ class SettingWidget {
           //       width: getSize().width, 
           //       height: 52, 
           //       text: isApprovedCertificate ? appText.approved : appText.upload,
-          //       bgColor: isApprovedCertificate ? greyE7 : green77(), 
+          //       bgColor: isApprovedCertificate ? greyE7 : primaryColor, 
           //       textColor: isApprovedCertificate ? greyA5 :Colors.white,
           //       iconPath: isApprovedCertificate ? null : AppAssets.uploadSvg,
           //       iconColor: Colors.white

@@ -300,24 +300,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 controller: scrollController,
                 physics: const BouncingScrollPhysics(),
                 slivers: [
-                  SliverToBoxAdapter(
-                    child: Container(
-                      height: MediaQuery.of(context).size.height * 0.40,
-                      margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(32),
-                        child: Image.asset(
-                          AppAssets.design1,
-                          fit: BoxFit.contain,
-                          width: double.infinity,
-                          height: double.infinity,
-                        ),
-                      ),
-                    ),
-                  ),
                   SliverToBoxAdapter(child: space(30)),
                   // Featured Courses Slider
                   if (featuredListData.isNotEmpty || isLoadingFeaturedListData)
@@ -353,17 +335,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   decoration: BoxDecoration(
-                                    color: green77().withOpacity(0.1),
+                                    color: primaryColor.withOpacity(0.1),
                                     borderRadius: BorderRadius.circular(20),
                                     border: Border.all(
-                                      color: green77().withOpacity(0.2),
+                                      color: primaryColor.withOpacity(0.2),
                                       width: 1,
                                     ),
                                   ),
                                   child: Text(
                                     '${featuredListData.length} Courses',
                                     style: style12Bold().copyWith(
-                                      color: green77(),
+                                      color: primaryColor,
                                       letterSpacing: 0.2,
                                     ),
                                   ),
@@ -453,22 +435,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                               Container(
                                                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                                 decoration: BoxDecoration(
-                                                  color: green77().withOpacity(0.2),
+                                                  color: primaryColor.withOpacity(0.2),
                                                   borderRadius: BorderRadius.circular(20),
                                                   border: Border.all(
-                                                    color: green77().withOpacity(0.3),
+                                                    color: primaryColor.withOpacity(0.3),
                                                     width: 1,
                                                   ),
                                                 ),
                                                 child: Row(
                                                   mainAxisSize: MainAxisSize.min,
                                                   children: [
-                                                    Icon(Icons.star_rounded, color: green77(), size: 16),
+                                                    Icon(Icons.star_rounded, color: primaryColor, size: 16),
                                                     space(0, width: 8),
                                                     Text(
                                                       'Featured',
                                                       style: style12Bold().copyWith(
-                                                        color: green77(),
+                                                        color: primaryColor,
                                                         letterSpacing: 0.2,
                                                       ),
                                                     ),
@@ -517,7 +499,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                                     child: Text(
                                                       CurrencyUtils.calculator(course.price),
                                                       style: style16Bold().copyWith(
-                                                        color: green77(),
+                                                        color: primaryColor,
                                                         letterSpacing: 0.2,
                                                       ),
                                                     ),
@@ -526,14 +508,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                                                     decoration: BoxDecoration(
                                                       gradient: LinearGradient(
-                                                        colors: [green77(), green77().withOpacity(0.8)],
+                                                        colors: [primaryColor, primaryColor.withOpacity(0.8)],
                                                         begin: Alignment.topLeft,
                                                         end: Alignment.bottomRight,
                                                       ),
                                                       borderRadius: BorderRadius.circular(30),
                                                       boxShadow: [
                                                         BoxShadow(
-                                                          color: green77().withOpacity(0.3),
+                                                          color: primaryColor.withOpacity(0.3),
                                                           blurRadius: 10,
                                                           offset: const Offset(0, 5),
                                                         ),
@@ -577,11 +559,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 width: currentSliderIndex == index ? 32 : 8,
                                 height: 8,
                                 decoration: BoxDecoration(
-                                  color: currentSliderIndex == index ? green77() : greyE7,
+                                  color: currentSliderIndex == index ? primaryColor : greyE7,
                                   borderRadius: BorderRadius.circular(4),
                                   boxShadow: currentSliderIndex == index ? [
                                     BoxShadow(
-                                      color: green77().withOpacity(0.3),
+                                      color: primaryColor.withOpacity(0.3),
                                       blurRadius: 8,
                                       offset: const Offset(0, 2),
                                     ),
@@ -623,12 +605,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                     decoration: BoxDecoration(
-                                      color: green77().withOpacity(0.1),
+                                      color: primaryColor.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
                                     child: Text(
                                       '${newsetListData.length} Courses',
-                                      style: style12Bold().copyWith(color: green77()),
+                                      style: style12Bold().copyWith(color: primaryColor),
                                     ),
                                   ),
                                 ],
@@ -721,7 +703,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               value: loadingProgress.expectedTotalBytes != null
                                   ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
                                   : null,
-                              color: green77(),
+                              color: primaryColor,
                             ),
                           ),
                         );
@@ -767,7 +749,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           ? 'Free'
                           : CurrencyUtils.calculator(course.price ?? 0),
                       style: TextStyle(
-                        color: green77(),
+                        color: primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),

@@ -75,7 +75,7 @@ class UserProfileWidget {
                           width: 45,
                           height: 45,
                           decoration: BoxDecoration(
-                              color: green77(), shape: BoxShape.circle),
+                              color: primaryColor, shape: BoxShape.circle),
                           alignment: Alignment.center,
                           child: SvgPicture.asset(AppAssets.videoSvg),
                         ),
@@ -358,7 +358,7 @@ class UserProfileWidget {
                 width: (getSize().width - 45) / 2,
                 height: 52,
                 decoration: BoxDecoration(
-                    color: green77(), borderRadius: borderRadius(radius: 17)),
+                    color: primaryColor, borderRadius: borderRadius(radius: 17)),
               )),
           Positioned.fill(
               child: Row(
@@ -478,7 +478,7 @@ class UserProfileWidget {
                     width: getSize().width,
                     height: 52,
                     text: appText.send,
-                    bgColor: green77(),
+                    bgColor: primaryColor,
                     textColor: Colors.white,
                     isLoading: isLoading),
               ),

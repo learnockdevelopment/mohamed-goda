@@ -103,7 +103,7 @@ class _MeetingDetailsPageState extends State<MeetingDetailsPage> {
                           color: details?.meeting?.status == 'pending' || details?.meeting?.status == 'open'
                             ? yellow29
                             : details?.meeting?.status == 'finished'
-                              ? green77()
+                              ? primaryColor
                               : red49,
 
                           width: 15
@@ -114,7 +114,7 @@ class _MeetingDetailsPageState extends State<MeetingDetailsPage> {
                             details?.meeting?.status == 'pending' || details?.meeting?.status == 'open'
                             ? yellow29.withOpacity(.25)
                             : details?.meeting?.status == 'finished'
-                              ? green77().withOpacity(.25)
+                              ? primaryColor.withOpacity(.25)
                               : red49.withOpacity(.25), 
                             blur: 30, y: 2
                           )
@@ -397,7 +397,7 @@ class _MeetingDetailsPageState extends State<MeetingDetailsPage> {
                                 ? appText.createJoinInfo
                                 : appText.joinMeeting, 
 
-                          bgColor: (details?.meeting?.status == 'pending' && isConsultant) || details?.meeting?.status == 'open' ? green77() : greyCF, 
+                          bgColor: (details?.meeting?.status == 'pending' && isConsultant) || details?.meeting?.status == 'open' ? primaryColor : greyCF, 
                           textColor: Colors.white
                         ),
                       ),
@@ -422,8 +422,8 @@ class _MeetingDetailsPageState extends State<MeetingDetailsPage> {
                         bgColor: Colors.white, 
                         textColor: Colors.white,
                         iconPath: AppAssets.menuCircleSvg,
-                        iconColor: green77(),
-                        borderColor: green77()
+                        iconColor: primaryColor,
+                        borderColor: primaryColor
                       ),
                       
                     }

@@ -281,7 +281,7 @@ class _FinalizeDatePageState extends State<FinalizeDatePage> {
                                           width: 15,
                                           height: 15,
                                           decoration: BoxDecoration(
-                                              color: green77(),
+                                              color: primaryColor,
                                               border: Border.all(
                                                   color: Colors.white,
                                                   width: 5),
@@ -432,7 +432,7 @@ class _FinalizeDatePageState extends State<FinalizeDatePage> {
                     width: getSize().width,
                     height: 52,
                     text: appText.reserveMeeting,
-                    bgColor: green77(),
+                    bgColor: primaryColor,
                     textColor: Colors.white,
                     isLoading: isLoading),
               ),

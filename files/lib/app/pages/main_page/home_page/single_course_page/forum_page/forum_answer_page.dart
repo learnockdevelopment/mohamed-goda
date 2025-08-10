@@ -135,7 +135,7 @@ class _ForumAnswerPageState extends State<ForumAnswerPage> {
                   width: 52, 
                   height: 52, 
                   text: appText.reply, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white,
                 )
               )

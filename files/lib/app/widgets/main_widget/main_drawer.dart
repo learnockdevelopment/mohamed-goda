@@ -125,6 +125,7 @@ class _MainDrawerState extends State<MainDrawer> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               SizedBox(
                                 height: 80,
@@ -214,8 +215,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                 ),
                               ),
                               const SizedBox(height: 8),
-                              SizedBox(
-                                height: 40,
+                              ConstrainedBox(
+                                constraints: const BoxConstraints(maxHeight: 40),
                                 child: _languageAndCurrencyMenu(context),
                               ),
                             ],
@@ -397,6 +398,7 @@ class _MainDrawerState extends State<MainDrawer> {
     bool showCurrency = StorageService.getUserMultiCurrency();
 
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         if (!showCurrency)
           Expanded(child: _menuButton(context, true))
@@ -409,7 +411,7 @@ class _MainDrawerState extends State<MainDrawer> {
     );
   }
 
-  Widget _menuButton(BuildContext context, bool isLanguage) {
+    Widget _menuButton(BuildContext context, bool isLanguage) {
     return GestureDetector(
       onTap: () async {
         if (isLanguage) {

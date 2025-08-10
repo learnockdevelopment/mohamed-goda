@@ -12,13 +12,13 @@ class Badges{
       padding: padding(horizontal: 7, vertical: 5),
       
       decoration: BoxDecoration(
-        color: greyE7,
+        color: primaryColor.withOpacity(0.2),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.finished,
-        style: style10Regular().copyWith(color: greyB2, height: .8),
+        style: style10Regular().copyWith(color: primaryColor2, height: .8),
       ),
     );
   }
@@ -29,13 +29,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: blue64().withOpacity(.3),
+        color: primaryColor2.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.finished,
-        style: style10Regular().copyWith(color: blue64(), height: .8),
+        style: style10Regular().copyWith(color: primaryColor2, height: .8),
       ),
     );
   }
@@ -46,13 +46,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: blue64().withOpacity(.3),
+        color: primaryColor2.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.inProgress,
-        style: style10Regular().copyWith(color: blue64(), height: .8),
+        style: style10Regular().copyWith(color: primaryColor2, height: .8),
       ),
     );
   }
@@ -80,13 +80,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77().withOpacity(.3),
+        color: primaryColor.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.liveClass,
-        style: style10Regular().copyWith(color: green77(), height: .8),
+        style: style10Regular().copyWith(color: primaryColor, height: .8),
       ),
     );
   }
@@ -97,13 +97,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77().withOpacity(.3),
+        color: primaryColor.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.course,
-        style: style10Regular().copyWith(color: green77(), height: .8),
+        style: style10Regular().copyWith(color: primaryColor, height: .8),
       ),
     );
   }
@@ -114,13 +114,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77().withOpacity(.3),
+        color: primaryColor.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.textClass,
-        style: style10Regular().copyWith(color: green77(), height: .8),
+        style: style10Regular().copyWith(color: primaryColor, height: .8),
       ),
     );
   }
@@ -201,7 +201,7 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77(),
+        color: primaryColor,
         borderRadius: borderRadius(radius: 100),
       ),
 
@@ -271,7 +271,7 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77(),
+        color: primaryColor,
         borderRadius: borderRadius(radius: 100),
       ),
 
@@ -288,13 +288,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: greyE7,
+        color: primaryColor.withOpacity(0.2),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.closed,
-        style: style10Regular().copyWith(color: greyB2, height: 1),
+        style: style10Regular().copyWith(color: primaryColor2, height: 1),
       ),
     );
   }
@@ -323,13 +323,13 @@ class Badges{
       padding: padding(horizontal: 6, vertical: 5),
       
       decoration: BoxDecoration(
-        color: green77().withOpacity(.3),
+        color: primaryColor.withOpacity(.3),
         borderRadius: borderRadius(radius: 100),
       ),
 
       child: Text(
         appText.replied,
-        style: style10Regular().copyWith(color: green77(), height: 1),
+        style: style10Regular().copyWith(color: primaryColor, height: 1),
       ),
     );
   }

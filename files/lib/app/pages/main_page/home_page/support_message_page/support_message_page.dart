@@ -230,9 +230,9 @@ class _SupportMessagePageState extends State<SupportMessagePage> with TickerProv
           width: 52, 
           height: 52, 
           text: '', 
-          bgColor: green77(), 
+          bgColor: primaryColor, 
           textColor: Colors.white,
-          boxShadow: boxShadow(green77().withOpacity(.3), y: 6, blur: 10),
+          boxShadow: boxShadow(primaryColor.withOpacity(.3), y: 6, blur: 10),
           iconPath: AppAssets.plusLineSvg,
           iconColor: Colors.white,
           icWidth: 18
@@ -267,7 +267,7 @@ class _SupportMessagePageState extends State<SupportMessagePage> with TickerProv
               height: 65,
     
               decoration: BoxDecoration(
-                color: green77(),
+                color: primaryColor,
                 borderRadius: borderRadius(radius: 14)
               ),
     

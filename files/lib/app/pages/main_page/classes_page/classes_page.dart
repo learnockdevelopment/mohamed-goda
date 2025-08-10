@@ -146,7 +146,7 @@ class _ClassesPageState extends State<ClassesPage>
                               width: getSize().width * .65,
                               height: 52,
                               text: appText.login,
-                              bgColor: green77(),
+                              bgColor: primaryColor,
                               textColor: Colors.white,
                               raduis: 16),
                           space(getSize().height * .15),

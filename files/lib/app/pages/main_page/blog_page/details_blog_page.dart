@@ -235,7 +235,7 @@ class _DetailsBlogPageState extends State<DetailsBlogPage> {
                   width: getSize().width, 
                   height: 52, 
                   text: appText.leaveAComment, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
               )

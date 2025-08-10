@@ -157,8 +157,8 @@ class _AssignmentHistoryPageState extends State<AssignmentHistoryPage> {
                             height: 52, 
                             text: appText.reply, 
                             bgColor: Colors.white, 
-                            textColor: green77(),
-                            borderColor: green77(),
+                            textColor: primaryColor,
+                            borderColor: primaryColor,
                             raduis: 15
                           ),
                         ),
@@ -178,7 +178,7 @@ class _AssignmentHistoryPageState extends State<AssignmentHistoryPage> {
                               width: getSize().width, 
                               height: 52, 
                               text: appText.rateAssignment, 
-                              bgColor: green77(), 
+                              bgColor: primaryColor, 
                               textColor: Colors.white,
                               raduis: 15
                             ),

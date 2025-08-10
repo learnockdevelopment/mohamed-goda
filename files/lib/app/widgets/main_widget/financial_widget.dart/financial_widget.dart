@@ -45,7 +45,7 @@ class FinancialWidget{
 
             }, 
             AppAssets.walletSvg, 
-            green77(),
+            primaryColor,
             isLoading: isLoadingCharge
           ),
 
@@ -136,7 +136,7 @@ class FinancialWidget{
               }
             }, 
             AppAssets.walletSvg, 
-            blue64()
+            primaryColor2
           ),
 
           space(35),
@@ -477,12 +477,12 @@ class FinancialWidget{
                             height: 45, 
                             text: buttonText, 
                             bgColor: Colors.white, 
-                            textColor: green77(),
-                            borderColor: green77(),
+                            textColor: primaryColor,
+                            borderColor: primaryColor,
                             raduis: 15,
                             horizontalPadding: 18,
                             isLoading: isLoading,
-                            loadingColor: green77()
+                            loadingColor: primaryColor
                           ),
                   
                         },
@@ -546,7 +546,7 @@ class FinancialWidget{
             width: 68,
             height: 68,
             decoration: BoxDecoration(
-              color: isUp ? green77() : red49,
+              color: isUp ? primaryColor : red49,
               borderRadius: borderRadius(radius: 10) 
             ),
 
@@ -586,7 +586,7 @@ class FinancialWidget{
 
                     Text(
                       '${isUp ? '+' : '-'}$amount',
-                      style: style16Bold().copyWith(color: isUp ? green77() : red49),
+                      style: style16Bold().copyWith(color: isUp ? primaryColor : red49),
                     )
                     
                   ],
@@ -624,7 +624,7 @@ class FinancialWidget{
               height: 68,
               decoration: BoxDecoration(
                 color: data.status == 'approved' 
-                  ? green77() 
+                  ? primaryColor 
                   : data.status == 'waiting'
                     ? yellow29
                     : red49,
@@ -688,7 +688,7 @@ class FinancialWidget{
 
                       Text(
                         CurrencyUtils.calculator(data.amount),
-                        style: style16Regular().copyWith(color: green77()), 
+                        style: style16Regular().copyWith(color: primaryColor), 
                       )
                     ],
                   )
@@ -725,7 +725,7 @@ class FinancialWidget{
             height: 68,
             decoration: BoxDecoration(
               color: status == 'done' 
-                ? green77() 
+                ? primaryColor 
                 : status == 'waiting'
                   ? yellow29
                   : red49,
@@ -779,7 +779,7 @@ class FinancialWidget{
 
                     Text(
                       amount,
-                      style: style16Bold().copyWith(color: green77()),
+                      style: style16Bold().copyWith(color: primaryColor),
                     )
                     
                   ],
@@ -908,7 +908,7 @@ class FinancialWidget{
                     width: getSize().width, 
                     height: 52, 
                     text: appText.send, 
-                    bgColor: green77(), 
+                    bgColor: primaryColor, 
                     textColor: Colors.white,
                     isLoading: isLoading
                   ),

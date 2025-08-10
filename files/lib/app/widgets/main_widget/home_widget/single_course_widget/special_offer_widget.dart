@@ -77,7 +77,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                         space(0, width: 6),
                         Text(
                           appText.specialOffer,
-                          style: style12Bold().copyWith(color: green77()),
+                          style: style12Bold().copyWith(color: primaryColor),
                         )
                       ],
                     ),
@@ -100,7 +100,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                                     .split(':')
                                     .first,
                                 style:
-                                    style16Regular().copyWith(color: green77()),
+                                    style16Regular().copyWith(color: primaryColor),
                               ),
                               space(3),
                               Text(
@@ -114,7 +114,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                                 padding: const EdgeInsets.only(top: 14),
                                 child: Text(" : ",
                                     style: style16Regular()
-                                        .copyWith(color: green77()))),
+                                        .copyWith(color: primaryColor))),
 
                           // hour
                           
@@ -129,7 +129,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                                               .difference(DateTime.now()))
                                       .split(':')[1],
                                   style: style16Regular()
-                                      .copyWith(color: green77()),
+                                      .copyWith(color: primaryColor),
                                 ),
                                 space(3),
                                 Text(
@@ -144,7 +144,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                               padding: const EdgeInsets.only(top: 14),
                               child: Text(" : ",
                                   style: style16Regular()
-                                      .copyWith(color: green77())),
+                                      .copyWith(color: primaryColor)),
                             ),
                           
 
@@ -160,7 +160,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                                               .difference(DateTime.now()))
                                       .split(':')[2],
                                   style: style16Regular()
-                                      .copyWith(color: green77()),
+                                      .copyWith(color: primaryColor),
                                 ),
                                 space(3),
                                 Text(
@@ -175,7 +175,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                               padding: const EdgeInsets.only(top: 14),
                               child: Text(" : ",
                                   style: style16Regular()
-                                      .copyWith(color: green77())),
+                                      .copyWith(color: primaryColor)),
                             ),
                           
 
@@ -191,7 +191,7 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                                               .difference(DateTime.now()))
                                       .split(':')[3],
                                   style: style16Regular()
-                                      .copyWith(color: green77()),
+                                      .copyWith(color: primaryColor),
                                 ),
                                 space(3),
                                 Text(
@@ -215,10 +215,10 @@ class _SpecialOfferWidgetState extends State<SpecialOfferWidget> {
                     child: Container(
                       padding: padding(horizontal: 12, vertical: 13),
                       decoration: BoxDecoration(
-                          color: green77(),
+                          color: primaryColor,
                           borderRadius: borderRadius(radius: 10),
                           boxShadow: [
-                            boxShadow(green77().withOpacity(.2),
+                            boxShadow(primaryColor.withOpacity(.2),
                                 blur: 15, y: 10)
                           ]),
                       child: Column(

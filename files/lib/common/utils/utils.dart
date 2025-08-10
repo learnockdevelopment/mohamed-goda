@@ -21,7 +21,7 @@ String checkTitleWithLanguage(List<Translations> data){
 Color getColorFromRGBString(String rgbString) {
 
     if(rgbString.isEmpty){
-      return green77();
+      return primaryColor;
     }
 
     // Remove "rgb(" and ")" and split by comma

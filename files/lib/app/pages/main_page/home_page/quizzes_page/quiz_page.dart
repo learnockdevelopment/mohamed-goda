@@ -172,7 +172,7 @@ class _QuizPageState extends State<QuizPage> {
         
         appBar: AppBar(
 
-          backgroundColor: green77(),
+          backgroundColor: primaryColor,
           elevation: 0,
           shadowColor: Colors.grey.withOpacity(.2),
           automaticallyImplyLeading: false,
@@ -234,14 +234,14 @@ class _QuizPageState extends State<QuizPage> {
                         width: getSize().width,
                         height: 20,
                         decoration: BoxDecoration(
-                          color: green77(),
+                          color: primaryColor,
                           borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28))
                         ),
                       ), 
             
                       secondChild: Container(
                         decoration: BoxDecoration(
-                          color: green77(),
+                          color: primaryColor,
                           borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28))
                         ),
                         width: getSize().width,
@@ -584,8 +584,8 @@ class _QuizPageState extends State<QuizPage> {
                         height: 52, 
                         text: appText.previous, 
                         bgColor: Colors.white, 
-                        textColor: green77(),
-                        borderColor: green77()
+                        textColor: primaryColor,
+                        borderColor: primaryColor
                       )
                     ),
 
@@ -663,7 +663,7 @@ class _QuizPageState extends State<QuizPage> {
                           width: getSize().width,
                           height: 52, 
                           text: appText.next, 
-                          bgColor: green77(), 
+                          bgColor: primaryColor, 
                           textColor: Colors.white
                         )
                       ),

@@ -136,12 +136,12 @@ class _SelectDatePageState extends State<SelectDatePage> {
 
                     calendarStyle: CalendarStyle(
                       todayDecoration: BoxDecoration(
-                        color: green77(),
+                        color: primaryColor,
                         shape: BoxShape.circle,
                       ),
 
                       selectedDecoration: BoxDecoration(
-                        color: green77(),
+                        color: primaryColor,
                         shape: BoxShape.circle,
                       ),
                       
@@ -177,7 +177,7 @@ class _SelectDatePageState extends State<SelectDatePage> {
                               width: 45,
                               height: 45,
                               decoration: BoxDecoration(
-                                color: green77(),
+                                color: primaryColor,
                                 shape: BoxShape.circle,
                               ),
                               
@@ -252,10 +252,10 @@ class _SelectDatePageState extends State<SelectDatePage> {
                             duration: const Duration(milliseconds: 250),
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
-                              color: selectedTime == meetings?.times?[index] ? green77() : Colors.white,
+                              color: selectedTime == meetings?.times?[index] ? primaryColor : Colors.white,
                               borderRadius: borderRadius(radius: 10),
                               border: Border.all(
-                                color: selectedTime == meetings?.times?[index] ? green77() : greyE7,
+                                color: selectedTime == meetings?.times?[index] ? primaryColor : greyE7,
                               )
                             ),
 
@@ -285,7 +285,7 @@ class _SelectDatePageState extends State<SelectDatePage> {
                   width: getSize().width, 
                   height: 51, 
                   text: appText.finalizeReservation, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
 

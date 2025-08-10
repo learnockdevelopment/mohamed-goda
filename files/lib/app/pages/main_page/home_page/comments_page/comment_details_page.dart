@@ -81,7 +81,7 @@ class _CommentDetailsPageState extends State<CommentDetailsPage> {
                               width: 45,
                               height: 45,
                               decoration: BoxDecoration(
-                                color: green77(),
+                                color: primaryColor,
                                 shape: BoxShape.circle
                               ),
                               alignment: Alignment.center,
@@ -176,7 +176,7 @@ class _CommentDetailsPageState extends State<CommentDetailsPage> {
                         width: getSize().width, 
                         height: 52, 
                         text: appText.edit, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         raduis: 15
                       ),
@@ -226,7 +226,7 @@ class _CommentDetailsPageState extends State<CommentDetailsPage> {
                         width: getSize().width, 
                         height: 52, 
                         text: appText.reply, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         raduis: 15
                       ),
@@ -243,8 +243,8 @@ class _CommentDetailsPageState extends State<CommentDetailsPage> {
                         height: 52, 
                         text: appText.report, 
                         bgColor: Colors.white, 
-                        textColor: green77(),
-                        borderColor: green77(),
+                        textColor: primaryColor,
+                        borderColor: primaryColor,
                         raduis: 15
                       ),
                     ),

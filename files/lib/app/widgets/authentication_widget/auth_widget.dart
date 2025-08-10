@@ -21,7 +21,7 @@ class AuthWidget{
           height: 42,
             
           decoration: BoxDecoration(
-            color: selectedType == type ? green77() : Colors.white,
+            color: selectedType == type ? primaryColor : Colors.white,
             borderRadius: borderRadius(radius: 15),
           ),
             

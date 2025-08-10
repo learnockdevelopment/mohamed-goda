@@ -143,7 +143,7 @@ class BlogWidget{
                         width: getSize().width, 
                         height: 52, 
                         text: appText.submitComment,
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -208,7 +208,7 @@ class BlogWidget{
                   width: getSize().width, 
                   height: 52, 
                   text: appText.report,
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
 
@@ -257,7 +257,7 @@ class BlogWidget{
                       height: 45,
                       child: Text(
                         categories[index].title ?? '',
-                        style: style16Regular().copyWith(color: categories[index].id == selectedCategory?.id ? green77() : grey3A),
+                        style: style16Regular().copyWith(color: categories[index].id == selectedCategory?.id ? primaryColor : grey3A),
                       ),
                     ),
                   );

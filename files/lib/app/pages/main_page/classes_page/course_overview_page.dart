@@ -266,7 +266,7 @@ class _CourseOverviewPageState extends State<CourseOverviewPage> {
                   width: getSize().width, 
                   height: 52, 
                   text: appText.view, 
-                  bgColor: green77(), 
+                  bgColor: primaryColor, 
                   textColor: Colors.white
                 ),
               )

@@ -22,7 +22,7 @@ class CategoryModel {
   CategoryModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
-    color = json['color'] != null ? hexToColor(json['color']) : green77();
+    color = json['color'] != null ? hexToColor(json['color']) : primaryColor;
     icon = json['icon'];
     if (json['sub_categories'] != null) {
       subCategories = <CategoryModel>[];

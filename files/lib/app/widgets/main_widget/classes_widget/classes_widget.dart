@@ -113,7 +113,7 @@ class ClassessWidget {
                                                       0) >
                                                   0
                                               ? greyCF
-                                              : green77(),
+                                              : primaryColor,
                                           decoration:
                                               (courseData.discountPercent ??
                                                           0) >
@@ -125,7 +125,7 @@ class ClassessWidget {
                                                           0) >
                                                       0
                                                   ? greyCF
-                                                  : green77(),
+                                                  : primaryColor,
                                         ),
                                       ),
                                       
@@ -142,7 +142,7 @@ class ClassessWidget {
                                                         0) ~/
                                                     100)),
                                             style: style14Regular().copyWith(
-                                              color: green77(),
+                                              color: primaryColor,
                                             ),
                                           ),
                                         },
@@ -225,7 +225,7 @@ class ClassessWidget {
                               ((courseData.progressPercent ?? 0) / 100),
                           height: 6,
                           decoration: BoxDecoration(
-                              color: green77(), borderRadius: borderRadius()),
+                              color: primaryColor, borderRadius: borderRadius()),
                         ),
                       );
                     },

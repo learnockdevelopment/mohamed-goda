@@ -126,7 +126,7 @@ class SupportWidget{
                         width: getSize().width,
                         height: 52,
                         text: appText.send, 
-                        bgColor: green77(), 
+                        bgColor: primaryColor, 
                         textColor: Colors.white,
                         isLoading: isLoading
                       ),
@@ -254,9 +254,9 @@ class SupportWidget{
                           height: 52,
                           text: '', 
                           bgColor: Colors.white, 
-                          textColor: green77(),
+                          textColor: primaryColor,
                           iconPath: AppAssets.attachmentSvg,
-                          borderColor: green77()
+                          borderColor: primaryColor
                         ),
                         
                         space(0,width: 16),
@@ -293,7 +293,7 @@ class SupportWidget{
                             width: getSize().width,
                             height: 52,
                             text: appText.send, 
-                            bgColor: green77(), 
+                            bgColor: primaryColor, 
                             textColor: Colors.white,
                             isLoading: isLoading
                           )

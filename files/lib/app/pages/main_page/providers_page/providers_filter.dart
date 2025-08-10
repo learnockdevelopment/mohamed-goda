@@ -203,10 +203,10 @@ class _ProvidersFilterState extends State<ProvidersFilter> {
                             duration: const Duration(milliseconds: 300),
                             decoration: BoxDecoration(
                                 color: checkCategory(index)
-                                    ? green77()
+                                    ? primaryColor
                                     : Colors.white,
                                 border: Border.all(
-                                  color: green77(),
+                                  color: primaryColor,
                                 ),
                                 borderRadius: borderRadius(radius: 10)),
                             child: Text(
@@ -214,7 +214,7 @@ class _ProvidersFilterState extends State<ProvidersFilter> {
                               style: style12Regular().copyWith(
                                   color: checkCategory(index)
                                       ? Colors.white
-                                      : green77()),
+                                      : primaryColor),
                             ),
                           ),
                         );
@@ -254,7 +254,7 @@ class _ProvidersFilterState extends State<ProvidersFilter> {
                   width: getSize().width,
                   height: 52,
                   text: appText.filterItems,
-                  bgColor: green77(),
+                  bgColor: primaryColor,
                   textColor: Colors.white),
 
               space(30),
