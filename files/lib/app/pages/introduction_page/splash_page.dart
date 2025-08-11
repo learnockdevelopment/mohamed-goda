@@ -7,6 +7,7 @@ import 'package:webinar/app/pages/offline_page/internet_connection_page.dart';
 import 'package:webinar/app/services/guest_service/guest_service.dart';
 import 'package:webinar/common/common.dart';
 import 'package:webinar/config/assets.dart';
+import 'package:webinar/config/colors.dart';
 
 import '../../services/storage_service.dart';
 
@@ -39,10 +40,10 @@ class _SplashPageState extends State<SplashPage>
       duration: const Duration(seconds: 5),
     );
 
-    // Define the background color animation
+    // Define the background color animation - use the new color
     backgroundColorAnimation = ColorTween(
-      begin: Colors.white,
-      end: Colors.deepPurple,
+      begin: Color(0xffeff1ee),
+      end: Color(0xffeff1ee),
     ).animate(animationController);
 
     // Define the logo position animation (from bottom to center)
@@ -189,26 +190,15 @@ class _SplashPageState extends State<SplashPage>
                   alignment: Alignment.center,
                   children: [
                     // Expanding Logo
-                    Container(
-                      width: logoSizeAnimation.value,
-                      height: logoSizeAnimation.value,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent, // Keep white background for contrast
-                        shape: BoxShape.circle, // Circular shape
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 10,
-                            spreadRadius: 2,
-                          ),
-                        ],
-                      ),
-                      child: Padding(
+                    ClipOval(
+                      child: Container(
+                        color: Color(0xffeff1ee), // Logo background color matches page color
                         padding: const EdgeInsets.all(20),
                         child: Image.asset(
-                          AppAssets.splashPng, // Your logo
-                          width: 100,
-                          height: 100,
+                          AppAssets.splashPng,
+                          width: logoSizeAnimation.value - 40,
+                          height: logoSizeAnimation.value - 40,
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
@@ -219,7 +209,7 @@ class _SplashPageState extends State<SplashPage>
                         width: logoSizeAnimation.value + 40, // Slightly larger than logo
                         height: logoSizeAnimation.value + 40,
                         child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.grey.shade600),
                           strokeWidth: 4,
                         ),
                       ),

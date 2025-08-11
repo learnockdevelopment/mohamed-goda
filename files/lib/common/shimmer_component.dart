@@ -7,48 +7,428 @@ import 'package:webinar/config/assets.dart';
 import 'package:webinar/config/colors.dart';
 import 'package:webinar/locator.dart';
 
-Widget courseItemVerticallyShimmer() {
+// Enhanced shimmer with better colors and animation
+Widget enhancedShimmer({
+  required Widget child,
+  Color? baseColor,
+  Color? highlightColor,
+  Duration duration = const Duration(milliseconds: 1500),
+}) {
   return Shimmer.fromColors(
-    baseColor: primaryColor.withOpacity(0.1),
-    highlightColor: primaryColor.withOpacity(0.05),
+    baseColor: baseColor ?? Color(0xffeff1ee).withOpacity(0.4),
+    highlightColor: highlightColor ?? Color(0xffeff1ee).withOpacity(0.8),
+    period: duration,
+    child: child,
+  );
+}
+
+// Enhanced shimmer with gradient effect
+Widget gradientShimmer({
+  required Widget child,
+  List<Color>? colors,
+  Duration duration = const Duration(milliseconds: 2000),
+}) {
+  return Shimmer.fromColors(
+    baseColor: colors?.first ?? Color(0xffeff1ee).withOpacity(0.3),
+    highlightColor: colors?.last ?? Color(0xffeff1ee).withOpacity(0.7),
+    period: duration,
+    child: child,
+  );
+}
+
+// Enhanced course item shimmer for vertical layout
+Widget courseItemVerticallyShimmer() {
+  return enhancedShimmer(
     child: Container(
       margin: const EdgeInsetsDirectional.only(bottom: 16),
-      decoration: BoxDecoration(borderRadius: borderRadius()),
-      padding: padding(horizontal: 8, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      padding: padding(horizontal: 16, vertical: 16),
       width: getSize().width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // image
-          shimmerUi(height: 85, width: 135),
+          // Enhanced image placeholder
+          Container(
+            width: 135,
+            height: 85,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+            ),
+          ),
 
-          // details
+          // Enhanced details
           Expanded(
             child: SizedBox(
               height: 85,
               child: Padding(
-                padding: padding(horizontal: 8),
+                padding: padding(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // title
-                    shimmerUi(height: 8, width: getSize().width * .5),
+                    // Enhanced title
+                    Container(
+                      height: 12,
+                      width: getSize().width * 0.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                    ),
 
-                    // name and date and time
-                    shimmerUi(height: 8, width: getSize().width * .3),
+                    // Enhanced subtitle
+                    Container(
+                      height: 10,
+                      width: getSize().width * 0.3,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
 
-                    // price and date
+                    // Enhanced price and date row
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        shimmerUi(height: 8, width: getSize().width * .35),
-                        shimmerUi(height: 8, width: 20),
+                        Container(
+                          height: 10,
+                          width: getSize().width * 0.35,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                        Container(
+                          height: 10,
+                          width: 20,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// Enhanced course item shimmer for horizontal layout
+Widget courseItemShimmer({
+  bool isSmallSize = true,
+  double width = 158.0,
+  double height = 200.0,
+  double endCardPadding = 16.0,
+  bool isShowReward = false,
+}) {
+  return enhancedShimmer(
+    child: Container(
+      margin: EdgeInsetsDirectional.only(end: endCardPadding),
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 15,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Enhanced image placeholder
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Container(
+              width: width,
+              height: 100,
+              color: Colors.white,
+            ),
+          ),
+
+          // Enhanced details
+          Expanded(
+            child: Padding(
+              padding: padding(horizontal: 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  space(16),
+
+                  // Enhanced title
+                  Container(
+                    width: width,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                  ),
+
+                  space(12),
+
+                  // Enhanced subtitle
+                  Container(
+                    width: width / 3,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+
+                  const Spacer(),
+
+                  // Enhanced price
+                  Container(
+                    width: width / 2,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                  ),
+
+                  space(12),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// New: Enhanced featured course shimmer
+Widget featuredCourseShimmer() {
+  return gradientShimmer(
+    colors: [
+      Color(0xffeff1ee).withOpacity(0.3),
+      Color(0xffeff1ee).withOpacity(0.6),
+      Color(0xffeff1ee).withOpacity(0.3),
+    ],
+    child: Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(32),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 30,
+            offset: const Offset(0, 15),
+          ),
+        ],
+      ),
+      height: 320,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Enhanced image placeholder
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+              ),
+            ),
+          ),
+          
+          // Enhanced content area
+          Container(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Enhanced badge
+                Container(
+                  width: 80,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                
+                space(16),
+                
+                // Enhanced title
+                Container(
+                  height: 20,
+                  width: getSize().width * 0.6,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                
+                space(12),
+                
+                // Enhanced description
+                Container(
+                  height: 16,
+                  width: getSize().width * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                
+                space(20),
+                
+                // Enhanced bottom row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// New: Enhanced category shimmer
+Widget categoryShimmer() {
+  return enhancedShimmer(
+    child: Container(
+      width: 120,
+      height: 80,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+          space(8),
+          Container(
+            width: 60,
+            height: 12,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(6),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// New: Enhanced search bar shimmer
+Widget searchBarShimmer() {
+  return enhancedShimmer(
+    child: Container(
+      margin: const EdgeInsets.symmetric(horizontal: 24),
+      height: 56,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 15,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// New: Enhanced section header shimmer
+Widget sectionHeaderShimmer() {
+  return enhancedShimmer(
+    child: Container(
+      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 150,
+                height: 24,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              space(8),
+              Container(
+                width: 200,
+                height: 16,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            width: 80,
+            height: 32,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
             ),
           ),
         ],
@@ -218,109 +598,6 @@ Widget singleCourseShimmer({
                 ),
               ),
             ],
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
-Widget courseItemShimmer(
-    {bool isSmallSize = true,
-    double width = 158.0,
-    height = 200.0,
-    double endCardPadding = 16.0,
-    bool isShowReward = false}) {
-  return Shimmer.fromColors(
-    baseColor: primaryColor.withOpacity(0.1),
-    highlightColor: primaryColor.withOpacity(0.05),
-    child: Container(
-      margin: EdgeInsetsDirectional.only(end: endCardPadding),
-      width: width,
-      height: height,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          // image
-          ClipRRect(
-            borderRadius: borderRadius(radius: 15),
-            child: Container(
-              width: width,
-              height: 100,
-              color: grey33,
-            ),
-          ),
-
-          // details
-          Expanded(
-            child: Padding(
-              padding: padding(horizontal: 4),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  space(12),
-
-                  // title
-                  Container(
-                    width: width,
-                    height: 10,
-                    decoration: BoxDecoration(
-                        color: grey33, borderRadius: borderRadius()),
-                  ),
-
-                  space(10),
-
-                  Container(
-                    width: width / 4,
-                    height: 10,
-                    decoration: BoxDecoration(
-                        color: grey33, borderRadius: borderRadius()),
-                  ),
-
-                  const Spacer(),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: (width / 2.3),
-                        height: 8,
-                        decoration: BoxDecoration(
-                            color: grey33, borderRadius: borderRadius()),
-                      ),
-                      Container(
-                        width: (width / 2.3),
-                        height: 8,
-                        decoration: BoxDecoration(
-                            color: grey33, borderRadius: borderRadius()),
-                      ),
-                    ],
-                  ),
-
-                  space(10),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: (width / 4),
-                        height: 8,
-                        decoration: BoxDecoration(
-                            color: grey33, borderRadius: borderRadius()),
-                      ),
-                      Container(
-                        width: (width / 4),
-                        height: 8,
-                        decoration: BoxDecoration(
-                            color: grey33, borderRadius: borderRadius()),
-                      ),
-                    ],
-                  ),
-
-                  // const Spacer(),
-                ],
-              ),
-            ),
           ),
         ],
       ),

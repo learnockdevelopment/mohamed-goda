@@ -88,10 +88,14 @@ dependency_overrides:
 flutter_icons:
   android: true
   ios: true
-  adaptive_icon_foreground: "assets/image/png/Logo.png"
-  adaptive_icon_background: "assets/image/png/Logo.png"  # Same as foreground
-  adaptive_icon_maskable: true
+
   image_path: "assets/image/png/Logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/image/png/maskable-icon.png"
+  
+  # Ensure proper icon generation
+  min_sdk_android: 21
+  remove_alpha_ios: true
 
 
 

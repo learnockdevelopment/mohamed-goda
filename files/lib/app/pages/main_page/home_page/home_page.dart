@@ -301,58 +301,100 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 physics: const BouncingScrollPhysics(),
                 slivers: [
                   SliverToBoxAdapter(child: space(30)),
+                  
+                  // Search Bar Shimmer (when loading)
+                  if (isLoadingFeaturedListData || isLoadingNewsetListData)
+                    SliverToBoxAdapter(
+                      child: searchBarShimmer(),
+                    ),
+                  
+                  // Comprehensive shimmer for initial loading
+                  if (isLoadingFeaturedListData && isLoadingNewsetListData)
+                    SliverToBoxAdapter(
+                      child: Column(
+                        children: [
+                          // Featured section shimmer
+                          Container(
+                            margin: const EdgeInsets.only(top: 32, bottom: 20),
+                            child: sectionHeaderShimmer(),
+                          ),
+                          featuredCourseShimmer(),
+                          space(24),
+                          
+                          // Newest section shimmer
+                          Container(
+                            margin: const EdgeInsets.only(top: 32, bottom: 20),
+                            child: sectionHeaderShimmer(),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Column(
+                              children: List.generate(3, (index) => Padding(
+                                padding: const EdgeInsets.only(bottom: 24),
+                                child: courseItemShimmer(),
+                              )),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  
                   // Featured Courses Slider
                   if (featuredListData.isNotEmpty || isLoadingFeaturedListData)
                     SliverToBoxAdapter(
                       child: Column(
                         children: [
-                          Container(
-                            margin: const EdgeInsets.only(top: 32, bottom: 20),
-                            padding: const EdgeInsets.symmetric(horizontal: 24),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Featured Courses',
-                                      style: style24Bold().copyWith(
-                                        color: grey33,
-                                        letterSpacing: -0.5,
+                          // Enhanced section header with shimmer
+                          if (isLoadingFeaturedListData)
+                            sectionHeaderShimmer()
+                          else
+                            Container(
+                              margin: const EdgeInsets.only(top: 32, bottom: 20),
+                              padding: const EdgeInsets.symmetric(horizontal: 24),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Featured Courses',
+                                        style: style24Bold().copyWith(
+                                          color: grey33,
+                                          letterSpacing: -0.5,
+                                        ),
+                                      ),
+                                      space(4),
+                                      Text(
+                                        'Handpicked courses for you',
+                                        style: style14Regular().copyWith(
+                                          color: greyA5,
+                                          letterSpacing: 0.2,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                    decoration: BoxDecoration(
+                                      color: primaryColor.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: primaryColor.withOpacity(0.2),
+                                        width: 1,
                                       ),
                                     ),
-                                    space(4),
-                                    Text(
-                                      'Handpicked courses for you',
-                                      style: style14Regular().copyWith(
-                                        color: greyA5,
+                                    child: Text(
+                                      '${featuredListData.length} Courses',
+                                      style: style12Bold().copyWith(
+                                        color: primaryColor,
                                         letterSpacing: 0.2,
                                       ),
                                     ),
-                                  ],
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                                  decoration: BoxDecoration(
-                                    color: primaryColor.withOpacity(0.1),
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                      color: primaryColor.withOpacity(0.2),
-                                      width: 1,
-                                    ),
                                   ),
-                                  child: Text(
-                                    '${featuredListData.length} Courses',
-                                    style: style12Bold().copyWith(
-                                      color: primaryColor,
-                                      letterSpacing: 0.2,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
                           Container(
                             height: 320,
                             child: PageView.builder(
@@ -365,10 +407,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               itemCount: isLoadingFeaturedListData ? 1 : featuredListData.length,
                               itemBuilder: (context, index) {
                                 if (isLoadingFeaturedListData) {
-                                  return Container(
-                                    margin: const EdgeInsets.symmetric(horizontal: 20),
-                                    child: courseItemVerticallyShimmer(),
-                                  );
+                                  return featuredCourseShimmer();
                                 }
 
                                 final course = featuredListData[index];
@@ -615,7 +654,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   ),
                                 ],
                               ),
-                            ),
+                            )
+                          else if (isLoadingNewsetListData)
+                            sectionHeaderShimmer(),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 24),
                             child: Column(
